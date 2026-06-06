@@ -306,7 +306,15 @@ strong { color: var(--text-primary); }
 
 .hero__content { max-width: 560px; }
 
-.hero__headline { margin-bottom: 20px; }
+.hero__headline { margin-bottom: 12px; }
+
+.hero__tagline {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--blue-mid);
+  margin-bottom: 16px;
+  font-family: var(--font-heading);
+}
 
 .hero__sub {
   font-size: 1.1rem;
