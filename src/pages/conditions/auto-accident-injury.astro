@@ -1,0 +1,189 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Auto Accident Injury Chiropractic Care in Garden City, KS",
+  "url": "https://prohealthks.com/conditions/auto-accident-injury",
+  "description": "ProHealth Chiropractic provides chiropractic care for auto accident injuries in Garden City, KS — whiplash, back pain, neck pain, and more. We work with insurance and personal injury attorneys.",
+  "about": {
+    "@type": "MedicalCondition",
+    "name": "Auto Accident Injury",
+    "possibleTreatment": {
+      "@type": "MedicalTherapy",
+      "name": "Chiropractic Adjustment with ProAdjuster"
+    }
+  },
+  "mainContentOfPage": {
+    "@type": "WebPageElement",
+    "cssSelector": ".condition-page"
+  }
+};
+
+const relatedConditions = [
+  { href: '/conditions/whiplash', label: 'Whiplash' },
+  { href: '/conditions/neck-pain', label: 'Neck Pain' },
+  { href: '/conditions/back-pain', label: 'Back Pain' },
+  { href: '/conditions/disc-injury', label: 'Disc Injury' },
+  { href: '/conditions/headaches-migraines', label: 'Headaches & Migraines' },
+];
+---
+
+<Layout
+  title="Auto Accident Injury Chiropractor in Garden City, KS | ProHealth Chiropractic"
+  description="Injured in a car accident near Garden City, KS? Dr. Yager specializes in auto accident injury recovery — whiplash, back pain, neck pain. We work with insurance and personal injury attorneys. Call (620) 271-0243."
+  canonical="https://prohealthks.com/conditions/auto-accident-injury"
+  schema={schema}
+  pageClass="page-condition"
+>
+  <Nav slot="nav" />
+
+  <!-- URGENCY STRIP -->
+  <div class="urgency-strip">
+    <div class="container urgency-strip__inner">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <strong>Time-sensitive:</strong> Kansas law gives you just <strong>2 years</strong> to file a personal injury claim after a car accident. Get evaluated now — even if you feel okay.
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <div class="page-hero__content" data-gsap="fade-up">
+        <div class="badge badge--blue">Auto Accident Injury</div>
+        <h1>Hurt in a Car Accident<br />Near Garden City?</h1>
+        <p>You don't have to wait for pain to become unbearable. Get evaluated now, protect your claim, and start healing — with chiropractic care designed for accident recovery.</p>
+        <div class="hero__actions" style="margin-top: 28px;">
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--primary btn--lg">Book Your Evaluation</a>
+          <a href="tel:6202710243" class="btn btn--outline btn--lg">Call (620) 271-0243</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT + SIDEBAR -->
+  <section class="section condition-page">
+    <div class="container condition-page__inner">
+
+      <!-- MAIN CONTENT -->
+      <div class="condition-page__content" data-gsap="fade-up">
+
+        <h2>Why Car Accident Injuries Often Go Undetected</h2>
+        <p>After a car accident, your body releases a flood of adrenaline. This natural stress response can mask pain and injury for hours — sometimes days. Many accident victims feel "fine" immediately after a crash, only to wake up the next morning barely able to move their neck or get out of bed.</p>
+        <p>This delay is dangerous for two reasons:</p>
+        <ul>
+          <li>The injury gets worse without proper treatment</li>
+          <li>A gap between the accident and your first medical evaluation can be used by insurance companies to dispute your claim</li>
+        </ul>
+        <p>Getting evaluated promptly — even if you think you're okay — protects both your health and your legal rights.</p>
+
+        <h2>What a Car Accident Does to Your Spine</h2>
+        <p>Even a low-speed collision can generate enough force to strain the muscles and ligaments of your neck and back, displace spinal joints, and irritate or compress nearby nerves. The most common auto injury — whiplash — occurs when your head snaps forward and backward in a fraction of a second. The cervical spine (neck) is especially vulnerable because it has the least protection in a crash.</p>
+        <p>Common injuries we treat after auto accidents include:</p>
+        <ul>
+          <li><strong>Whiplash</strong> — neck strain from rapid head movement</li>
+          <li><strong>Cervical sprain/strain</strong> — ligament or muscle damage in the neck</li>
+          <li><strong>Lumbar sprain/strain</strong> — lower back injury from seatbelt forces or impact</li>
+          <li><strong>Disc injury</strong> — bulging or herniated discs from crash forces</li>
+          <li><strong>Headaches and migraines</strong> — often originating from upper cervical dysfunction</li>
+          <li><strong>Shoulder and arm pain</strong> — from nerve involvement or direct impact</li>
+          <li><strong>TMJ (jaw) pain</strong> — from the jolt of impact</li>
+        </ul>
+
+        <h2>How the ProAdjuster Helps Auto Accident Injuries</h2>
+        <p>At ProHealth Chiropractic, Dr. Yager uses the <strong>ProAdjuster</strong> — a computer-guided instrument — to assess and treat auto accident injuries with precision and safety.</p>
+        <p>Here's why it's especially well-suited for accident recovery:</p>
+        <ul>
+          <li><strong>No twisting or cracking</strong> — gentle enough for acute (fresh) injuries when even light touch can be painful</li>
+          <li><strong>Objective assessment</strong> — the computer measures spinal segments and shows Dr. Yager exactly where dysfunction exists</li>
+          <li><strong>Targeted treatment</strong> — instead of adjusting broadly, the ProAdjuster works on the specific segments affected by the crash</li>
+          <li><strong>Faster recovery</strong> — by restoring proper motion and nerve function, your body can begin healing more efficiently</li>
+        </ul>
+        <p>Most patients notice improvement within the first few visits. Some report significant relief after their very first treatment.</p>
+
+        <h2>Kansas PIP Insurance & Chiropractic Coverage</h2>
+        <p>Kansas is a <strong>no-fault insurance state</strong>, which means your own Personal Injury Protection (PIP) coverage pays for your medical treatment after an accident — regardless of who caused the crash. Under Kansas law, PIP provides at least $4,500 in medical benefits per person.</p>
+        <p>Chiropractic care is a covered medical expense under Kansas PIP insurance. You can use your PIP benefits to pay for your chiropractic evaluation and treatment without any out-of-pocket cost in most cases.</p>
+        <p>If your injuries are more serious or if you pursue a personal injury claim, we also work with personal injury attorneys throughout Southwest Kansas who can help you navigate the process.</p>
+
+        <div class="condition-callout condition-callout--warning">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div>
+            <strong>Kansas Statute of Limitations</strong>
+            <p>You have <strong>2 years</strong> from the date of the accident to file a personal injury lawsuit in Kansas (K.S.A. 60-513). Don't wait until you're in severe pain — by then, it may be too late to protect your legal rights and your health.</p>
+          </div>
+        </div>
+
+        <h2>What to Do After a Car Accident in Kansas</h2>
+        <ol>
+          <li><strong>Seek medical evaluation immediately</strong> — even if you feel okay. Document everything.</li>
+          <li><strong>Call your insurance company</strong> — report the accident and ask about your PIP benefits.</li>
+          <li><strong>Call ProHealth Chiropractic</strong> at (620) 271-0243 — we can often see you within 24–48 hours.</li>
+          <li><strong>Keep records</strong> — save all medical bills, correspondence, and records of your symptoms.</li>
+          <li><strong>Consult a personal injury attorney</strong> — if your injuries are significant, a consultation is usually free.</li>
+        </ol>
+
+        <h2>Don't Let an Insurance Company Minimize Your Injuries</h2>
+        <p>Insurance adjusters are trained to settle claims quickly and cheaply. When you delay getting treatment, they use the gap as evidence that your injuries weren't serious. Getting a chiropractic evaluation promptly creates a documented medical record of your injuries — and gives you the best chance at a full recovery.</p>
+        <p>At ProHealth Chiropractic, we provide thorough documentation of your injuries, treatment, and progress. This documentation is valuable whether you're pursuing a personal injury claim or simply want to ensure your insurer covers your care appropriately.</p>
+
+        <h2>Start Your Recovery Today</h2>
+        <p>You don't have to live with accident-related pain, and you don't have to navigate the insurance system alone. Call us at <strong>(620) 271-0243</strong> or book online to schedule your evaluation. We'll take care of the rest.</p>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="condition-page__sidebar">
+
+        <!-- CTA Card -->
+        <div class="sidebar-card sidebar-card--primary">
+          <h3>Get Your Evaluation</h3>
+          <p>We often have same-week availability for accident patients. Call or book online now.</p>
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--white btn--block">Book Online</a>
+          <a href="tel:6202710243" class="btn btn--outline-white btn--block" style="margin-top:10px;">Call (620) 271-0243</a>
+        </div>
+
+        <!-- Hours -->
+        <div class="sidebar-card">
+          <h4>Office Hours</h4>
+          <ul class="sidebar-hours">
+            <li><span>Monday – Thursday</span><span>9am – 5:30pm</span></li>
+            <li class="closed"><span>Friday – Sunday</span><span>Closed</span></li>
+          </ul>
+          <p style="font-size:0.8rem;color:var(--gray);margin-top:8px;">Lunch break 12pm–1pm daily</p>
+        </div>
+
+        <!-- Related Conditions -->
+        <div class="sidebar-card">
+          <h4>Related Conditions</h4>
+          <ul class="sidebar-links">
+            {relatedConditions.map(c => (
+              <li><a href={c.href}>{c.label} →</a></li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Review Quote -->
+        <div class="sidebar-card sidebar-card--review">
+          <div class="sidebar-stars">★★★★★</div>
+          <p>"I was in a car accident and my neck was killing me. Dr. Yager had me feeling dramatically better within just a few visits. I can't recommend him enough."</p>
+          <strong>— ProHealth Patient</strong>
+        </div>
+
+      </aside>
+    </div>
+  </section>
+
+  <CtaBanner
+    heading="Don't Wait to Get Evaluated"
+    subtext="Kansas PIP insurance covers chiropractic care. Get treated now and protect your claim."
+    primaryLabel="Book Your Evaluation"
+    secondaryLabel="Call (620) 271-0243"
+  />
+
+  <Footer slot="footer" />
+</Layout>

@@ -1,0 +1,370 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": ["MedicalBusiness", "LocalBusiness"],
+  "name": "ProHealth Chiropractic Wellness Centers",
+  "url": "https://prohealthks.com",
+  "telephone": "+16202710243",
+  "description": "ProHealth Chiropractic in Garden City, Kansas offers gentle chiropractic care using the ProAdjuster technique for back pain, neck pain, auto accident injuries, and whole-family wellness.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2502 N. Johns St., Suite B",
+    "addressLocality": "Garden City",
+    "addressRegion": "KS",
+    "postalCode": "67846",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 37.9888, "longitude": -100.8854 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "09:00", "closes": "12:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "13:00", "closes": "17:30" }
+  ],
+  "priceRange": "$$",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "54" },
+  "medicalSpecialty": "Chiropractor"
+};
+
+const reviews = [
+  { initials: 'JM', name: 'Jennifer McKahan', time: '3 months ago', text: 'For years I struggled with back pain and my arms/hands falling asleep. After <strong>one visit</strong> my arms have not fallen asleep. I\'m sleeping through the night — it feels like a miracle!' },
+  { initials: 'DM', name: 'Damon McKahan', time: '2 months ago', text: 'I\'ve never been a fan of the "pop and crack" style. Dr. Yager is amazing and the ProAdjuster treatment is <strong>incredible</strong>! So comfortable and relaxing!' },
+  { initials: 'SC', name: 'Suzanne Corbett', time: '2 months ago', text: 'When I first went to him, I thought I would <strong>never be free of pain</strong> in my neck, shoulders and lower back. After the first few visits — amazing.' },
+  { initials: 'AM', name: 'Amanda Mullet', time: '3 months ago', text: 'I was scared of manual manipulation, especially my neck. With the ProAdjuster, that isn\'t an issue at all. The benefits I felt were <strong>almost immediate</strong>.' },
+  { initials: 'AC', name: 'Alexis Chambers', time: '11 months ago', text: 'Best adjustments I\'ve ever had! I love that they are open till 5:30 PM — it gives me time to get adjusted <strong>without taking off work</strong>.' },
+  { initials: 'KN', name: 'Kim Novack', time: '2 months ago', text: 'I am very pleased with my health improvements after the 42 day program. I received ongoing support and encouragement from coach Jodi. <strong>I feel GREAT!</strong>' },
+];
+---
+
+<Layout
+  title="Chiropractor in Garden City, KS | ProHealth Chiropractic"
+  description="ProHealth Chiropractic in Garden City, Kansas — Dr. James Yager uses the gentle ProAdjuster technique for back pain, neck pain, auto injuries & more. 4.9★ on Google. Call (620) 271-0243."
+  canonical="https://prohealthks.com/"
+  schema={schema}
+>
+  <Nav slot="nav" />
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg-shape"></div>
+    <div class="container hero__inner">
+      <div class="hero__content" data-gsap="fade-up">
+        <div class="badge badge--blue">Chiropractor in Garden City, KS</div>
+        <h1 class="hero__headline">
+          Real Relief.<br />
+          <em>No Cracking Required.</em>
+        </h1>
+        <p class="hero__sub">
+          Dr. James Yager uses the computer-guided <strong>ProAdjuster</strong> — a gentle, precise technique that detects exactly where you need care and delivers lasting results from the very first visit. Proudly serving Garden City, Kansas and surrounding communities since 1999.
+        </p>
+        <div class="hero__actions">
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--primary btn--lg">Book Your Appointment</a>
+          <a href="tel:6202710243" class="btn btn--outline btn--lg">Call (620) 271-0243</a>
+        </div>
+        <div class="hero__trust">
+          <div class="hero__stars">
+            <span>★★★★★</span>
+            <span><strong>4.9</strong> / 54 Google Reviews</span>
+          </div>
+          <div class="hero__trust-divider"></div>
+          <span>Serving Garden City since 1999</span>
+        </div>
+      </div>
+      <div class="hero__visual" data-gsap="fade-left">
+        <div class="hero__img-wrap">
+          <div class="hero__img-placeholder">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            <span>Photo Coming Soon</span>
+          </div>
+          <div class="hero__badge-float">
+            <div class="hero__badge-float-inner">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <div>
+                <strong>4.9 Stars</strong>
+                <span>54 Reviews</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
+    <div class="container trust-bar__inner">
+      <div class="trust-bar__item" data-gsap="fade-up" data-delay="0">
+        <strong class="trust-bar__num">54</strong>
+        <span>5-Star Google Reviews</span>
+      </div>
+      <div class="trust-bar__divider"></div>
+      <div class="trust-bar__item" data-gsap="fade-up" data-delay="0.1">
+        <strong class="trust-bar__num">25+</strong>
+        <span>Years Serving Garden City</span>
+      </div>
+      <div class="trust-bar__divider"></div>
+      <div class="trust-bar__item" data-gsap="fade-up" data-delay="0.2">
+        <strong class="trust-bar__num">4.9★</strong>
+        <span>Average Rating</span>
+      </div>
+      <div class="trust-bar__divider"></div>
+      <div class="trust-bar__item" data-gsap="fade-up" data-delay="0.3">
+        <strong class="trust-bar__num">All Ages</strong>
+        <span>Kids to Adults</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROADJUSTER -->
+  <section class="proadjuster section" id="proadjuster">
+    <div class="container proadjuster__inner">
+      <div class="proadjuster__visual" data-gsap="fade-right">
+        <div class="proadjuster__img-wrap">
+          <div class="proadjuster__img-placeholder">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            <span>ProAdjuster Photo</span>
+          </div>
+        </div>
+        <div class="proadjuster__pill">
+          <span class="dot dot--blue"></span> Computer-Guided Precision
+        </div>
+      </div>
+      <div class="proadjuster__content" data-gsap="fade-up">
+        <div class="badge badge--blue">Our Primary Technique</div>
+        <h2>The <em>ProAdjuster</em> — Chiropractic Reimagined</h2>
+        <p>Most people avoid the chiropractor because they're afraid of the "pop and crack." With the ProAdjuster, that's never an issue. This FDA-cleared, computer-guided instrument reads your spine like a diagnostic tool and delivers precise, gentle oscillation pulses exactly where your body needs them.</p>
+        <div class="proadjuster__features">
+          <div class="pa-feature">
+            <div class="pa-feature__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div>
+              <strong>No Twisting or Cracking</strong>
+              <span>Comfortable from the very first visit — even for nervous first-timers</span>
+            </div>
+          </div>
+          <div class="pa-feature">
+            <div class="pa-feature__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div>
+              <strong>Near-Immediate Results</strong>
+              <span>Most patients notice relief from the very first visit</span>
+            </div>
+          </div>
+          <div class="pa-feature">
+            <div class="pa-feature__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+            </div>
+            <div>
+              <strong>Pinpoint Diagnosis</strong>
+              <span>The computer measures exactly how your spine responds — no guesswork</span>
+            </div>
+          </div>
+          <div class="pa-feature">
+            <div class="pa-feature__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div>
+              <strong>Safe for the Whole Family</strong>
+              <span>Children, seniors, and post-surgery patients all benefit</span>
+            </div>
+          </div>
+        </div>
+        <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--primary">Experience It for Yourself</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services section section--alt" id="services">
+    <div class="container">
+      <div class="section-header" data-gsap="fade-up">
+        <div class="badge badge--blue">Chiropractic Care in Garden City, KS</div>
+        <h2>A Place of Health &amp; Healing</h2>
+        <p>Comprehensive chiropractic care for your whole family in Garden City, Kansas — from pain relief to long-term wellness.</p>
+      </div>
+      <div class="services__grid">
+        <div class="service-card service-card--featured" data-gsap="fade-up" data-delay="0">
+          <div class="service-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Chiropractic Care</h3>
+          <p>Dr. Yager creates a personalized adjustment plan using the ProAdjuster and manual techniques for your specific needs — neck pain, back pain, headaches, or wellness maintenance.</p>
+          <ul class="service-card__list">
+            <li>ProAdjuster (computer-guided)</li>
+            <li>Manual adjustments</li>
+            <li>E-stim therapy</li>
+            <li>Pre-adjustment muscle work</li>
+            <li>Maintenance &amp; preventive care</li>
+          </ul>
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--primary btn--sm">Book Now</a>
+        </div>
+        <div class="service-card" data-gsap="fade-up" data-delay="0.15">
+          <div class="service-card__icon service-card__icon--teal">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          </div>
+          <h3>Yager Diet &amp; Weight Management</h3>
+          <p>Jodi Yager leads our ChiroThin-based program — a supervised, structured approach that delivers real results. Patients have lost 40+ lbs in just 3 months.</p>
+          <ul class="service-card__list">
+            <li>42-day structured program</li>
+            <li>Personal coaching with Jodi</li>
+            <li>Video education &amp; in-person meetings</li>
+            <li>Ongoing accountability support</li>
+          </ul>
+          <a href="/contact" class="btn btn--outline btn--sm">Learn More</a>
+        </div>
+        <div class="service-card service-card--coming" data-gsap="fade-up" data-delay="0.3">
+          <div class="service-card__icon service-card__icon--muted">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="service-card__coming-badge">More Coming Soon</div>
+          <h3>Additional Services</h3>
+          <p>We're expanding. Ask us about everything we offer when you call or visit.</p>
+          <a href="tel:6202710243" class="btn btn--ghost btn--sm">Call to Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews section" id="reviews">
+    <div class="container">
+      <div class="section-header" data-gsap="fade-up">
+        <div class="badge badge--blue">Patient Stories</div>
+        <h2>Real Results. Real People.</h2>
+        <div class="reviews__rating">
+          <span class="reviews__stars">★★★★★</span>
+          <span><strong>4.9 out of 5</strong> · 54 Google Reviews</span>
+        </div>
+      </div>
+      <div class="reviews__grid">
+        {reviews.map((r, i) => (
+          <div class="review-card" data-gsap="fade-up" data-delay={String(i * 0.1)}>
+            <div class="review-card__stars">★★★★★</div>
+            <p set:html={`"${r.text}"`} />
+            <div class="review-card__author">
+              <div class="review-card__avatar">{r.initials}</div>
+              <div>
+                <strong>{r.name}</strong>
+                <span>{r.time}</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="reviews__cta" data-gsap="fade-up">
+        <a href="https://www.google.com/search?q=ProHealth+Chiropractic+Garden+City+KS+reviews" target="_blank" class="btn btn--outline">
+          Read All 54 Reviews on Google
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT DR YAGER -->
+  <section class="about section section--alt" id="about">
+    <div class="container about__inner">
+      <div class="about__visual" data-gsap="fade-right">
+        <div class="about__img-wrap">
+          <div class="about__img-placeholder">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span>Dr. Yager Photo</span>
+          </div>
+        </div>
+        <div class="about__credential">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Parker University Graduate, 1999
+        </div>
+      </div>
+      <div class="about__content" data-gsap="fade-up">
+        <div class="badge badge--blue">Meet Your Doctor</div>
+        <h2>Dr. James Yager</h2>
+        <p>A 1999 graduate of Parker University in Dallas, TX, Dr. Yager has spent over 25 years finding the <em>root cause</em> of your pain instead of just masking symptoms.</p>
+        <p>What sets him apart isn't just his technique — it's his genuine care for every patient. He remembers your name, asks about your family, and stays late to make sure you're actually feeling better.</p>
+        <blockquote class="about__quote">
+          "Life is too short to suffer and struggle needlessly."
+          <cite>— Dr. James Yager</cite>
+        </blockquote>
+        <div class="about__team-note">
+          <strong>And the whole team behind him:</strong> Jodi (diet coach), Andrea (office manager), Amy (pre-adjustment therapy), and Tonya (front desk). They're not just staff — they're family.
+        </div>
+        <a href="/about" class="btn btn--outline" style="margin-top: 24px;">Meet the Full Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container contact__inner">
+      <div class="contact__info" data-gsap="fade-up">
+        <div class="badge badge--blue">Find Us</div>
+        <h2>Come See Us in Garden City</h2>
+        <div class="contact__details">
+          <div class="contact__detail">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <strong>Address</strong>
+              <span>2502 N. Johns St., Suite B<br />Garden City, KS 67846</span>
+              <small>Across from Neighborhood Walmart · Next to the DMV</small>
+            </div>
+          </div>
+          <div class="contact__detail">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.86 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.77 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.84a16 16 0 006.29 6.29l1.2-1.2a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:6202710243">(620) 271-0243</a>
+              <small>New patients — please call to schedule</small>
+            </div>
+          </div>
+          <div class="contact__detail">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <div>
+              <strong>Hours</strong>
+              <span>Monday – Thursday</span>
+              <span>9:00 AM – 12:00 PM &nbsp;|&nbsp; 1:00 PM – 5:30 PM</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact__actions">
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--primary">Book Appointment Online</a>
+          <a href="https://www.google.com/maps/search/prohealth+chiropractic+garden+city+ks" target="_blank" class="btn btn--outline">Get Directions</a>
+        </div>
+      </div>
+      <div class="contact__map" data-gsap="fade-left">
+        <div class="contact__map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3116.4!2d-100.8854!3d37.9888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDU5JzE5LjciTiAxMDDCsDUzJzA3LjYiVw!5e0!3m2!1sen!2sus!4v1"
+            width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy"
+            title="ProHealth Chiropractic location map">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONDITIONS STRIP -->
+  <section class="conditions-strip">
+    <div class="container">
+      <p class="conditions-strip__label">We Treat</p>
+      <div class="conditions-strip__links">
+        <a href="/conditions/back-pain">Back Pain</a>
+        <a href="/conditions/neck-pain">Neck Pain</a>
+        <a href="/conditions/auto-accident-injury">Auto Accident Injury</a>
+        <a href="/conditions/sciatica">Sciatica</a>
+        <a href="/conditions/headaches-migraines">Headaches &amp; Migraines</a>
+        <a href="/conditions/whiplash">Whiplash</a>
+        <a href="/conditions/sports-injury">Sports Injury</a>
+        <a href="/conditions/disc-injury">Disc Injury</a>
+        <a href="/conditions/work-injury">Work Injury</a>
+        <a href="/conditions/shoulder-pain">Shoulder Pain</a>
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner />
+
+  <Footer slot="footer" />
+</Layout>

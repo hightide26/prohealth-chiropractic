@@ -1,0 +1,47 @@
+---
+export interface Props {
+  activePage?: string;
+}
+const { activePage = '' } = Astro.props;
+
+const links = [
+  { href: '/about',        label: 'About'       },
+  { href: '/#services',   label: 'Services'    },
+  { href: '/new-patients', label: 'New Patients' },
+  { href: '/#reviews',    label: 'Reviews'     },
+  { href: '/contact',     label: 'Contact'     },
+];
+---
+
+<header class="nav" id="nav">
+  <div class="nav__inner container">
+    <a href="/" class="nav__logo">
+      <span class="nav__logo-pro">PRO</span><span class="nav__logo-health">HEALTH</span>
+      <span class="nav__logo-sub">Chiropractic Wellness Centers</span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      {links.map(link => (
+        <a
+          href={link.href}
+          class={activePage === link.label ? 'nav__link--active' : ''}
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+    <div class="nav__cta">
+      <a href="tel:6202710243" class="btn btn--ghost">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.86 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.77 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.84a16 16 0 006.29 6.29l1.2-1.2a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+        (620) 271-0243
+      </a>
+      <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--primary">
+        Book Appointment
+      </a>
+    </div>
+    <button class="nav__burger" id="navBurger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>

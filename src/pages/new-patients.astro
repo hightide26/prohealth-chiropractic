@@ -1,0 +1,107 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+
+const steps = [
+  { num: '01', title: 'Call or Book Online', desc: 'Call us at (620) 271-0243 or use our online scheduler through Square. We\'ll confirm your appointment and send you everything you need before your first visit.' },
+  { num: '02', title: 'Complete Your Paperwork', desc: 'We\'ll send you a link to your new patient forms through ClickFunnels. Complete them online before your visit so we can spend your time on care, not paperwork.' },
+  { num: '03', title: 'Your Initial Consultation', desc: 'Dr. Yager takes time to hear your full health history. No rushing. He wants to understand what you\'ve been through, what\'s been tried, and what you\'re hoping for.' },
+  { num: '04', title: 'ProAdjuster Assessment', desc: 'Using the ProAdjuster, Dr. Yager will scan your spine to identify areas of dysfunction. The computer shows exactly where and how much each segment is responding.' },
+  { num: '05', title: 'Your First Adjustment', desc: 'Most patients receive their first treatment on the initial visit. The ProAdjuster is so gentle that many patients are surprised — and relieved — by how comfortable it feels.' },
+  { num: '06', title: 'Your Care Plan', desc: 'Dr. Yager will recommend a personalized plan based on your assessment. You\'ll know exactly what to expect, how long, and what milestones to look for.' },
+];
+
+const faqs = [
+  { q: 'Do you accept insurance?', a: 'We accept most major insurance plans. Please call our office at (620) 271-0243 to verify your specific coverage before your visit. We\'re happy to help you understand your benefits.' },
+  { q: 'Does the ProAdjuster hurt?', a: 'Almost never. The ProAdjuster uses gentle oscillation pulses — many patients describe it as a light tapping. There is no twisting, popping, or forceful manipulation. Most patients are surprised by how comfortable it is.' },
+  { q: 'How many visits will I need?', a: 'That depends entirely on your condition, how long you\'ve had it, and how your body responds. Dr. Yager will give you an honest assessment after your first visit. Some patients feel significant relief in just 3–5 visits; others with chronic conditions may benefit from a longer care plan.' },
+  { q: 'Can children receive care here?', a: 'Yes! Dr. Yager treats patients of all ages, including infants and young children. The ProAdjuster is especially well-suited for pediatric care because it requires virtually no force.' },
+  { q: 'Do I need a referral?', a: 'No referral is required. You can contact us directly to schedule an appointment. If you were referred by another provider, just let us know and we can coordinate care as needed.' },
+  { q: 'Why is there a deposit for new patients?', a: 'We ask for a small scheduling deposit for new patient appointments to reserve the extended time Dr. Yager dedicates to first visits. This is applied to your account and goes toward your visit cost. It helps us ensure we can give every new patient the full attention they deserve.' },
+  { q: 'What should I wear?', a: 'Comfortable, loose-fitting clothing is ideal. You don\'t need to change into a gown for most adjustments. If you\'re coming from work, that\'s totally fine — Dr. Yager will work around what you\'re wearing.' },
+  { q: 'How is ProHealth different from other chiropractors?', a: 'The ProAdjuster is the biggest difference. Most chiropractors use manual adjustment (the "pop and crack"). Dr. Yager primarily uses the computer-guided ProAdjuster, which lets him see objectively what\'s happening in your spine and treat it with precision. No guesswork. No cracking.' },
+];
+---
+
+<Layout
+  title="New Patients | ProHealth Chiropractic Garden City KS"
+  description="Starting care at ProHealth Chiropractic in Garden City, Kansas is easy. Learn what to expect on your first visit, how the ProAdjuster works, and answers to common questions."
+  canonical="https://prohealthks.com/new-patients"
+  pageClass="page-new-patients"
+>
+  <Nav slot="nav" activePage="New Patients" />
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <div class="page-hero__content" data-gsap="fade-up">
+        <div class="badge badge--blue">Welcome</div>
+        <h1>Your First Visit,<br /><em>Made Easy.</em></h1>
+        <p>We know trying a new healthcare provider can feel like a big step. Here's exactly what to expect — so you can walk in with confidence and walk out feeling better.</p>
+        <div class="hero__actions" style="margin-top: 32px;">
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--primary btn--lg">Book Your First Appointment</a>
+          <a href="tel:6202710243" class="btn btn--outline btn--lg">Call (620) 271-0243</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header" data-gsap="fade-up">
+        <div class="badge badge--blue">The Process</div>
+        <h2>What Happens at Your First Visit</h2>
+        <p>We've designed the new patient experience to be thorough, comfortable, and efficient — so you leave with answers, not more questions.</p>
+      </div>
+      <div class="steps-grid">
+        {steps.map((step, i) => (
+          <div class="step-card" data-gsap="fade-up" data-delay={String(i * 0.08)}>
+            <div class="step-card__num">{step.num}</div>
+            <h3>{step.title}</h3>
+            <p>{step.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMS CTA -->
+  <section class="info-banner">
+    <div class="container info-banner__inner" data-gsap="fade-up">
+      <div>
+        <h2>New Patient Forms</h2>
+        <p>Complete your paperwork online before your visit. It only takes a few minutes and saves time on appointment day.</p>
+      </div>
+      <div class="info-banner__actions">
+        <a href="https://prohealth.mykajabi.com/new-patient-forms" target="_blank" class="btn btn--white btn--lg">Complete Forms Online</a>
+        <a href="tel:6202710243" class="btn btn--outline-white btn--lg">Questions? Call Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header" data-gsap="fade-up">
+        <div class="badge badge--blue">FAQ</div>
+        <h2>Common Questions</h2>
+        <p>Everything new patients want to know before their first visit.</p>
+      </div>
+      <div class="faq-list" data-gsap="fade-up">
+        {faqs.map((faq) => (
+          <details class="faq-item">
+            <summary class="faq-item__q">{faq.q}</summary>
+            <div class="faq-item__a"><p>{faq.a}</p></div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner />
+
+  <Footer slot="footer" />
+</Layout>

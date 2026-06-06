@@ -1,0 +1,150 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const cities = ['Garden City', 'Dodge City', 'Liberal', 'Ulysses', 'Lakin', 'Sublette', 'Hugoton', 'Cimarron', 'Jetmore', 'Greensburg'];
+---
+
+<Layout
+  title="Contact & Hours | ProHealth Chiropractic Garden City KS"
+  description="Contact ProHealth Chiropractic in Garden City, Kansas. Call (620) 271-0243, book online, or find us at 2502 N. Johns St., Suite B. Open Monday–Thursday."
+  canonical="https://prohealthks.com/contact"
+  pageClass="page-contact"
+>
+  <Nav slot="nav" activePage="Contact" />
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <div class="page-hero__content" data-gsap="fade-up">
+        <div class="badge badge--blue">Get in Touch</div>
+        <h1>We're Here.<br /><em>Let's Help You Feel Better.</em></h1>
+        <p>Whether you're ready to book, have a question, or just want to learn more about the ProAdjuster — give us a call or stop by. We'd love to meet you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CONTENT -->
+  <section class="section">
+    <div class="container contact__inner">
+      <div class="contact__info" data-gsap="fade-up">
+        <div class="badge badge--blue">Contact Information</div>
+        <h2>Reach Us Anytime</h2>
+
+        <div class="contact__details">
+          <div class="contact__detail">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.86 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.77 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.84a16 16 0 006.29 6.29l1.2-1.2a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:6202710243">(620) 271-0243</a>
+              <small>Best way to reach us for questions or scheduling</small>
+            </div>
+          </div>
+
+          <div class="contact__detail">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <strong>Address</strong>
+              <span>2502 N. Johns St., Suite B<br />Garden City, KS 67846</span>
+              <small>Across from Neighborhood Walmart · Next to the DMV</small>
+            </div>
+          </div>
+
+          <div class="contact__detail">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <div>
+              <strong>Office Hours</strong>
+              <span>Monday – Thursday</span>
+              <span>9:00 AM – 12:00 PM</span>
+              <span>1:00 PM – 5:30 PM</span>
+              <small>Closed Friday, Saturday &amp; Sunday</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__actions" style="margin-top: 32px;">
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--primary">Book Online Now</a>
+          <a href="https://www.google.com/maps/search/prohealth+chiropractic+garden+city+ks" target="_blank" class="btn btn--outline">Get Directions</a>
+        </div>
+      </div>
+
+      <div class="contact__map" data-gsap="fade-left">
+        <div class="contact__map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3116.4!2d-100.8854!3d37.9888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDU5JzE5LjciTiAxMDDCsDUzJzA3LjYiVw!5e0!3m2!1sen!2sus!4v1"
+            width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy"
+            title="ProHealth Chiropractic location map">
+          </iframe>
+        </div>
+        <div class="contact__map-caption">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          2502 N. Johns St., Suite B · Garden City, KS 67846
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVING AREA -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header" data-gsap="fade-up">
+        <div class="badge badge--blue">Service Area</div>
+        <h2>Serving Southwest Kansas</h2>
+        <p>Patients drive from across the region to experience the ProAdjuster difference. If you're within driving distance, we'd love to see you.</p>
+      </div>
+      <div class="serving-grid" data-gsap="fade-up">
+        {cities.map(city => (
+          <div class="serving-city">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            {city}, KS
+          </div>
+        ))}
+      </div>
+      <p class="serving-note" data-gsap="fade-up">Not on this list? Call us at <a href="tel:6202710243">(620) 271-0243</a> — if you're willing to make the drive, we're glad to see you.</p>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>
+
+<style>
+.serving-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 32px 0 20px;
+}
+.serving-city {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: var(--navy);
+  font-size: 0.95rem;
+}
+.serving-city svg {
+  color: var(--blue);
+  flex-shrink: 0;
+}
+.serving-note {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+.serving-note a {
+  color: var(--blue);
+  font-weight: 600;
+}
+.contact__map-caption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+.contact__map-caption svg {
+  color: var(--blue);
+  flex-shrink: 0;
+}
+</style>

@@ -1,0 +1,35 @@
+---
+export interface Props {
+  heading?: string;
+  subtext?: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+}
+const {
+  heading = 'Ready to Feel Better?',
+  subtext = 'New patients always get extra time with Dr. Yager. Call us or book online today.',
+  primaryLabel = 'Book Online',
+  primaryHref = 'https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start',
+  secondaryLabel = 'Call (620) 271-0243',
+  secondaryHref = 'tel:6202710243',
+} = Astro.props;
+---
+
+<section class="cta-banner">
+  <div class="container cta-banner__inner" data-gsap="fade-up">
+    <div class="cta-banner__content">
+      <h2>{heading}</h2>
+      <p>{subtext}</p>
+    </div>
+    <div class="cta-banner__actions">
+      <a href={primaryHref} target={primaryHref.startsWith('http') ? '_blank' : undefined} class="btn btn--white btn--lg">
+        {primaryLabel}
+      </a>
+      <a href={secondaryHref} class="btn btn--outline-white btn--lg">
+        {secondaryLabel}
+      </a>
+    </div>
+  </div>
+</section>
