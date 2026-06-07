@@ -1,0 +1,295 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "ProAdjuster Chiropractic Technology in Garden City, KS",
+  "url": "https://prohealthks.com/services/proadjuster",
+  "description": "ProHealth Chiropractic in Garden City, KS uses the ProAdjuster — a 7th-generation, FDA-cleared, computer-guided chiropractic instrument. No cracking. No twisting. Precise, gentle, effective.",
+  "about": {
+    "@type": "MedicalTherapy",
+    "name": "ProAdjuster Chiropractic Technique",
+    "description": "Computer-guided spinal adjustment using piezoelectric sensor technology"
+  }
+};
+
+const faqs = [
+  { q: 'Does the ProAdjuster hurt?', a: 'Almost never. The ProAdjuster delivers gentle oscillating pulses — most patients describe it as a light tapping sensation. There is no twisting, popping, or forceful manipulation. Even patients who have been nervous about chiropractic for years find it completely comfortable.' },
+  { q: 'How is it different from a regular chiropractic adjustment?', a: 'Traditional manual adjustments rely on the chiropractor\'s hands and judgment to deliver a rapid thrust to a joint. The ProAdjuster uses a computerized sensor to measure each spinal segment objectively, then delivers a precise resonating force at exactly the right location and intensity. There\'s no guesswork — the computer shows Dr. Yager exactly what\'s happening in your spine before and after each treatment.' },
+  { q: 'Is the ProAdjuster safe for everyone?', a: 'Yes. Because it requires virtually no force, the ProAdjuster is appropriate for infants, elderly patients, pregnant women, post-surgical patients, and people with osteoporosis or other conditions that would make manual adjustment inadvisable. It is FDA-cleared and has been used in over 5,000 clinics worldwide.' },
+  { q: 'How quickly will I feel results?', a: 'Many patients notice improvement after their very first visit. The results compound with each session as proper spinal motion is progressively restored. Your timeline depends on how long the issue has been present and how your body responds — Dr. Yager will give you an honest assessment after your initial evaluation.' },
+  { q: 'Does ProHealth use the ProAdjuster on every patient?', a: 'The ProAdjuster is Dr. Yager\'s primary treatment tool and is used with the vast majority of patients. In some cases, he may combine it with other gentle techniques based on your specific needs. He will explain your care plan clearly after your first assessment.' },
+];
+---
+
+<Layout
+  title="ProAdjuster Chiropractic Technology | Garden City, KS | ProHealth Chiropractic"
+  description="Dr. Yager uses the 7th-generation ProAdjuster in Garden City, KS — FDA-cleared, computer-guided chiropractic care with no cracking or twisting. Used in 5,000+ clinics worldwide. Call (620) 271-0243."
+  canonical="https://prohealthks.com/services/proadjuster"
+  schema={schema}
+  pageClass="page-service"
+>
+  <Nav slot="nav" />
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <div class="page-hero__content" data-gsap="fade-up">
+        <div class="badge badge--blue">Our Signature Technology</div>
+        <h1>The ProAdjuster —<br /><em>Chiropractic Without the Crack</em></h1>
+        <p>Used in over 5,000 clinics across 42 countries. FDA-cleared. Computer-guided. And the reason so many Garden City patients finally got the relief they'd been searching for.</p>
+        <div class="hero__actions" style="margin-top: 28px;">
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--primary btn--lg">Experience It Today</a>
+          <a href="tel:6202710243" class="btn btn--outline btn--lg">Call (620) 271-0243</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT + SIDEBAR -->
+  <section class="section condition-page">
+    <div class="container condition-page__inner">
+
+      <div class="condition-page__content" data-gsap="fade-up">
+
+        <h2>What Is the ProAdjuster?</h2>
+        <p>The ProAdjuster is a 7th-generation, FDA-cleared, computerized chiropractic instrument developed over more than three decades of research and refinement. It was first introduced in 1999 by Dr. Moe and has since undergone six major revisions — the latest, the ProAdjuster SRT (Simultaneous Ramp Treatment), was released in 2023 with new patent-pending technology that increases force and frequency simultaneously for even more precise treatment.</p>
+        <p>Today it is used in over <strong>5,000 clinics across 42 countries</strong>, delivering an estimated <strong>one million adjustments every week</strong>. Dr. James Yager has been one of its dedicated practitioners in Garden City, Kansas for years — and the results speak for themselves in 54 five-star Google reviews.</p>
+
+        <h2>The Science: How It Actually Works</h2>
+        <p>At the heart of the ProAdjuster is <strong>piezoelectric sensor technology</strong> — the same category of sensing technology used by NASA to evaluate the structural integrity of ceramic cooling tiles on the Space Shuttle, and by aerospace and civil engineers to test the soundness of structures.</p>
+        <p>Here's what happens during a ProAdjuster assessment and treatment:</p>
+        <ol>
+          <li><strong>A light force is introduced into the vertebra.</strong> This initial pulse is so gentle you barely feel it.</li>
+          <li><strong>The force reflects back to the piezoelectric sensor.</strong> The sensor measures how the vertebra responded to that input — before your muscles have time to react and compensate.</li>
+          <li><strong>The computer interprets the data.</strong> The software determines whether that spinal segment is <em>too rigid</em> (hypo-mobile) or <em>too fluid</em> (hyper-mobile) — both of which indicate dysfunction.</li>
+          <li><strong>Treatment is delivered.</strong> The ProAdjuster then generates precise oscillating resonance pulses at exactly the frequency needed to restore normal motion to that specific segment.</li>
+        </ol>
+
+        <div class="condition-callout condition-callout--blue">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div>
+            <strong>Why Speed Matters</strong>
+            <p>The ProAdjuster's sensor responds faster than the body's natural muscle reflex. This means it gets a true, uncompensated reading of spinal motion — something impossible with manual palpation alone. No two spines are the same, and no estimate or educated guess replaces objective measurement.</p>
+          </div>
+        </div>
+
+        <h2>The Woodpecker Analogy</h2>
+        <p>One of the most useful ways to understand the ProAdjuster's mechanism is through the woodpecker. A woodpecker doesn't injure itself drilling into hardwood because it moves its head with extreme speed and precision — the force is distributed perfectly, never damaging the bird's brain despite the repeated impact.</p>
+        <p>The ProAdjuster works similarly: it delivers rapid, precise oscillating impulses that introduce motion into restricted spinal joints without the broad, forceful thrust of a manual adjustment. The soft-tipped instrument contacts your spine gently, and the computer controls the depth, frequency, and intensity of each pulse — something no human hand can replicate with the same consistency.</p>
+
+        <h2>ProAdjuster vs. Manual Chiropractic Adjustment</h2>
+        <div class="comparison-table">
+          <div class="comparison-table__header">
+            <div></div>
+            <div><strong>ProAdjuster</strong></div>
+            <div><strong>Manual Adjustment</strong></div>
+          </div>
+          <div class="comparison-table__row">
+            <div>Force</div>
+            <div>Computer-controlled, precise</div>
+            <div>Chiropractor-estimated</div>
+          </div>
+          <div class="comparison-table__row">
+            <div>Cracking/Popping</div>
+            <div>None</div>
+            <div>Common</div>
+          </div>
+          <div class="comparison-table__row">
+            <div>Diagnosis method</div>
+            <div>Objective sensor reading</div>
+            <div>Manual palpation</div>
+          </div>
+          <div class="comparison-table__row">
+            <div>Safe for all ages</div>
+            <div>Yes — infants to elderly</div>
+            <div>Varies by technique</div>
+          </div>
+          <div class="comparison-table__row">
+            <div>Post-surgical patients</div>
+            <div>Generally appropriate</div>
+            <div>Often contraindicated</div>
+          </div>
+          <div class="comparison-table__row">
+            <div>Pregnant patients</div>
+            <div>Safe</div>
+            <div>Requires modification</div>
+          </div>
+          <div class="comparison-table__row">
+            <div>Reproducibility</div>
+            <div>Consistent every visit</div>
+            <div>Varies by practitioner</div>
+          </div>
+        </div>
+
+        <h2>What the ProAdjuster Treats</h2>
+        <p>Because the ProAdjuster is a diagnostic and treatment tool for spinal dysfunction, it can help with virtually any condition that has a spinal or neurological component:</p>
+        <ul>
+          <li><strong>Back pain</strong> — lumbar, thoracic, and sacral regions</li>
+          <li><strong>Neck pain</strong> — including tech neck, stiffness, and cervical arthritis</li>
+          <li><strong>Whiplash and auto accident injuries</strong></li>
+          <li><strong>Sciatica and radiating nerve pain</strong></li>
+          <li><strong>Headaches and migraines</strong> — especially cervicogenic (neck-related) headaches</li>
+          <li><strong>Disc injuries</strong> — bulging or herniated discs</li>
+          <li><strong>Shoulder, arm, and hand pain</strong> from cervical nerve involvement</li>
+          <li><strong>Sports injuries</strong> and repetitive-use conditions</li>
+          <li><strong>Work injuries</strong></li>
+          <li><strong>Pregnancy-related back pain</strong></li>
+          <li><strong>Pediatric spinal complaints</strong></li>
+          <li><strong>Wellness and maintenance care</strong></li>
+        </ul>
+
+        <h2>The ProAdjuster SRT — 7th Generation Technology</h2>
+        <p>The latest evolution of the ProAdjuster — the SRT (Simultaneous Ramp Treatment) — represents a significant leap forward. Previous versions would increase either force or frequency during treatment. The SRT increases <em>both simultaneously</em>, creating a more effective resonance pattern that reaches deeper into the affected tissue while remaining comfortable for the patient.</p>
+        <p>This 7th-generation instrument also features improved sensor accuracy for more precise diagnosis, patent-pending instrument tips designed to optimize force delivery, and expanded applications for balance and athletic performance enhancement.</p>
+
+        <h2>Who Is the ProAdjuster Right For?</h2>
+        <p>The short answer: almost everyone. But the ProAdjuster is especially well-suited for patients who:</p>
+        <ul>
+          <li>Have avoided chiropractic because they're afraid of cracking or twisting</li>
+          <li>Have had previous spinal surgeries and can't receive manual manipulation</li>
+          <li>Are seniors with fragile bones or osteoporosis</li>
+          <li>Are pregnant and need gentle, safe care</li>
+          <li>Are infants or young children</li>
+          <li>Have acute (fresh) injuries that are too painful for manual adjustment</li>
+          <li>Have tried other chiropractors without lasting results</li>
+          <li>Simply want the most precise, data-driven care available</li>
+        </ul>
+
+        <h2>What to Expect at Your First ProAdjuster Visit</h2>
+        <p>Dr. Yager will begin with a thorough consultation to understand your history, symptoms, and goals. Then he'll use the ProAdjuster to scan your spine — this typically takes just a few minutes and is painless. The computer generates a reading that shows him exactly which segments need attention and how much.</p>
+        <p>Most new patients receive their first adjustment that same visit. You'll lie comfortably on the table while Dr. Yager works through each affected segment with the ProAdjuster. The whole treatment usually takes 10–20 minutes. Many patients walk out feeling noticeably different — and often considerably better — after their very first session.</p>
+
+        <!-- FAQ -->
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          {faqs.map(faq => (
+            <details class="faq-item">
+              <summary class="faq-item__q">{faq.q}</summary>
+              <div class="faq-item__a"><p>{faq.a}</p></div>
+            </details>
+          ))}
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="condition-page__sidebar">
+        <div class="sidebar-card sidebar-card--primary">
+          <h3>Try the ProAdjuster</h3>
+          <p>Most patients are amazed by how comfortable it is. Book your first visit and see for yourself.</p>
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--white btn--block">Book Online</a>
+          <a href="tel:6202710243" class="btn btn--outline-white btn--block" style="margin-top:10px;">Call (620) 271-0243</a>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Office Hours</h4>
+          <ul class="sidebar-hours">
+            <li><span>Monday – Thursday</span><span>9am – 5:30pm</span></li>
+            <li class="closed"><span>Friday – Sunday</span><span>Closed</span></li>
+          </ul>
+          <p style="font-size:0.8rem;color:var(--gray);margin-top:8px;">Lunch break 12pm–1pm daily</p>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>ProAdjuster Treats</h4>
+          <ul class="sidebar-links">
+            <li><a href="/conditions/back-pain">Back Pain →</a></li>
+            <li><a href="/conditions/neck-pain">Neck Pain →</a></li>
+            <li><a href="/conditions/auto-accident-injury">Auto Accident →</a></li>
+            <li><a href="/conditions/sciatica">Sciatica →</a></li>
+            <li><a href="/conditions/disc-injury">Disc Injury →</a></li>
+            <li><a href="/conditions/headaches-migraines">Headaches →</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card sidebar-card--stat">
+          <div class="sidebar-stat">
+            <strong>5,000+</strong>
+            <span>Clinics worldwide</span>
+          </div>
+          <div class="sidebar-stat">
+            <strong>42</strong>
+            <span>Countries</span>
+          </div>
+          <div class="sidebar-stat">
+            <strong>1M+</strong>
+            <span>Adjustments per week</span>
+          </div>
+        </div>
+
+        <div class="sidebar-card sidebar-card--review">
+          <div class="sidebar-stars">★★★★★</div>
+          <p>"I've never been a fan of the 'pop and crack' style. Dr. Yager is amazing and the ProAdjuster treatment is <strong>incredible</strong>! So comfortable and relaxing!"</p>
+          <strong>— Damon M., Garden City</strong>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <CtaBanner
+    heading="Ready to Feel What the ProAdjuster Can Do?"
+    subtext="New patients receive extra time with Dr. Yager. No cracking. No twisting. Just results."
+    primaryLabel="Book Your First Visit"
+    secondaryLabel="Call (620) 271-0243"
+  />
+
+  <Footer slot="footer" />
+</Layout>
+
+<style>
+.comparison-table {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 24px 0 32px;
+  font-size: 0.9rem;
+}
+.comparison-table__header,
+.comparison-table__row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 0;
+}
+.comparison-table__header {
+  background: var(--navy);
+  color: white;
+  padding: 12px 16px;
+}
+.comparison-table__header div { font-weight: 600; }
+.comparison-table__row {
+  padding: 10px 16px;
+  border-top: 1px solid var(--border);
+  color: var(--text-body);
+}
+.comparison-table__row:nth-child(even) { background: var(--blue-tint); }
+.comparison-table__row div:first-child { font-weight: 600; color: var(--navy); }
+
+.sidebar-card--stat { text-align: center; }
+.sidebar-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.sidebar-stat:last-child { border-bottom: none; }
+.sidebar-stat strong {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--blue);
+  line-height: 1;
+}
+.sidebar-stat span { font-size: 0.8rem; color: var(--text-muted); }
+
+@media (max-width: 600px) {
+  .comparison-table__header,
+  .comparison-table__row { grid-template-columns: 1fr 1fr; }
+  .comparison-table__header div:last-child,
+  .comparison-table__row div:last-child { display: none; }
+}
+</style>

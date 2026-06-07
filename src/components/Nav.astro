@@ -5,11 +5,12 @@ export interface Props {
 const { activePage = '' } = Astro.props;
 
 const links = [
-  { href: '/about',        label: 'About'       },
-  { href: '/#services',   label: 'Services'    },
-  { href: '/new-patients', label: 'New Patients' },
-  { href: '/#reviews',    label: 'Reviews'     },
-  { href: '/contact',     label: 'Contact'     },
+  { href: '/about',                          label: 'About'        },
+  { href: '/services/proadjuster',           label: 'ProAdjuster'  },
+  { href: '/services/chiropractic-adjustments', label: 'Services'  },
+  { href: '/new-patients',                   label: 'New Patients' },
+  { href: '/#reviews',                       label: 'Reviews'      },
+  { href: '/contact',                        label: 'Contact'      },
 ];
 ---
 
