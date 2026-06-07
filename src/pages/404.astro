@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Page Not Found | ProHealth Chiropractic"
+  description="The page you're looking for doesn't exist. Visit ProHealth Chiropractic in Garden City, KS or call (620) 271-0243."
+  pageClass="page-404"
+>
+  <Nav slot="nav" />
+
+  <section class="not-found">
+    <div class="container not-found__inner">
+      <div class="not-found__num">404</div>
+      <h1>Page Not Found</h1>
+      <p>Sorry — we couldn't find what you were looking for. Try one of the links below, or give us a call.</p>
+      <div class="not-found__links">
+        <a href="/" class="btn btn--primary btn--lg">Go to Homepage</a>
+        <a href="/conditions/auto-accident-injury" class="btn btn--outline btn--lg">Auto Accident</a>
+        <a href="/conditions/back-pain" class="btn btn--outline btn--lg">Back Pain</a>
+        <a href="/new-patients" class="btn btn--outline btn--lg">New Patients</a>
+        <a href="/contact" class="btn btn--outline btn--lg">Contact & Hours</a>
+      </div>
+      <a href="tel:6202710243" class="not-found__call">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.86 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.77 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.84a16 16 0 006.29 6.29l1.2-1.2a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Or call us at (620) 271-0243
+      </a>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>
+
+<style>
+.not-found {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+}
+.not-found__inner {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.not-found__num {
+  font-family: var(--font-heading);
+  font-size: clamp(6rem, 16vw, 10rem);
+  font-weight: 800;
+  color: var(--blue-pale);
+  line-height: 1;
+  margin-bottom: 16px;
+  letter-spacing: -4px;
+}
+.not-found__inner h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+.not-found__inner p {
+  color: var(--text-body);
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+.not-found__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.not-found__call {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.not-found__call:hover { text-decoration: underline; }
+</style>

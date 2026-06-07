@@ -966,13 +966,24 @@ strong { color: var(--text-primary); }
 .footer__bottom {
   padding: 20px 0;
 }
-.footer__bottom .container {
+.footer__bottom-inner {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 .footer__bottom span {
   font-size: 0.8rem;
   color: rgba(255,255,255,0.3);
+}
+.footer__bottom a {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.3);
+  text-decoration: none;
+}
+.footer__bottom a:hover {
+  color: rgba(255,255,255,0.6);
 }
 
 /* ============================================================
