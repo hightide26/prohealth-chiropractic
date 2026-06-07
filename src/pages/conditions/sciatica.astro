@@ -1,0 +1,145 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Sciatica Relief Chiropractor in Garden City, KS",
+  "url": "https://prohealthks.com/conditions/sciatica",
+  "description": "Sciatica causing shooting leg pain, numbness, or tingling? ProHealth Chiropractic in Garden City, KS uses the ProAdjuster to relieve sciatic nerve compression. Dr. James Yager, D.C.",
+  "about": {
+    "@type": "MedicalCondition",
+    "name": "Sciatica",
+    "possibleTreatment": {
+      "@type": "MedicalTherapy",
+      "name": "Chiropractic Adjustment with ProAdjuster"
+    }
+  }
+};
+
+const relatedConditions = [
+  { href: '/conditions/back-pain', label: 'Back Pain' },
+  { href: '/conditions/disc-injury', label: 'Disc Injury' },
+  { href: '/conditions/work-injury', label: 'Work Injury' },
+  { href: '/conditions/sports-injury', label: 'Sports Injury' },
+  { href: '/conditions/shoulder-pain', label: 'Shoulder Pain' },
+];
+---
+
+<Layout
+  title="Sciatica Relief in Garden City, KS | ProHealth Chiropractic"
+  description="Shooting pain down your leg? Sciatica treatment in Garden City, KS with the gentle ProAdjuster — no cracking or forceful manipulation. Dr. James Yager, D.C. Call (620) 271-0243."
+  canonical="https://prohealthks.com/conditions/sciatica"
+  schema={schema}
+  pageClass="page-condition"
+>
+  <Nav slot="nav" />
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <div class="page-hero__content" data-gsap="fade-up">
+        <div class="badge badge--blue">Sciatica</div>
+        <h1>Sciatica Relief in Garden City, KS — Stop the Shooting Pain</h1>
+        <p>That burning, electric pain that shoots from your lower back down through your leg is one of the most disabling symptoms we treat. Sciatica is a nerve problem — and chiropractic care addresses it at the source. Dr. Yager uses the ProAdjuster to gently reduce the spinal compression driving your sciatic pain.</p>
+        <div class="hero__actions" style="margin-top: 28px;">
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--primary btn--lg">Book Your Appointment</a>
+          <a href="tel:6202710243" class="btn btn--outline btn--lg">Call (620) 271-0243</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT + SIDEBAR -->
+  <section class="section condition-page">
+    <div class="container condition-page__inner">
+      <div class="condition-page__content" data-gsap="fade-up">
+
+        <h2>What Is the Sciatic Nerve — and What Causes Sciatica?</h2>
+        <p>The sciatic nerve is the longest nerve in the human body. It forms from several nerve roots that exit the lower lumbar spine (L4, L5) and sacrum (S1, S2, S3), then merges into a single large nerve that runs through the buttock and down the back of each leg to the foot. When any of those nerve roots are compressed or irritated — usually where they exit the spine — the result is sciatica.</p>
+        <p>Sciatica is not a diagnosis in itself; it's a symptom of an underlying problem. The most common causes include:</p>
+        <ul>
+          <li><strong>Herniated or bulging disc</strong> — the most frequent cause. A damaged disc bulges outward and presses against a nerve root in the lumbar spine.</li>
+          <li><strong>Spinal stenosis</strong> — narrowing of the spinal canal, most often from age-related degenerative changes, reduces the space for the nerve roots.</li>
+          <li><strong>Vertebral subluxation</strong> — a misaligned lumbar or sacral vertebra creates mechanical pressure on nearby nerve roots.</li>
+          <li><strong>Piriformis syndrome</strong> — the piriformis muscle in the buttock sits directly over the sciatic nerve; when it goes into spasm it can compress the nerve from the outside.</li>
+          <li><strong>Spondylolisthesis</strong> — a vertebra that has shifted forward out of line with the vertebra below it can narrow the nerve opening.</li>
+        </ul>
+
+        <h2>Recognizing Sciatic Nerve Pain</h2>
+        <p>Sciatica has a very recognizable pattern. Pain typically starts in the lower back or buttock and travels down one leg — occasionally both. The path of the pain follows the course of the sciatic nerve and often feels like a combination of:</p>
+        <ul>
+          <li>Sharp, shooting, or electric pain radiating down the leg</li>
+          <li>A burning or aching sensation in the buttock and thigh</li>
+          <li>Numbness or tingling in the leg, calf, or foot</li>
+          <li>Weakness in the leg, making it difficult to stand, walk, or climb stairs</li>
+          <li>Pain that worsens when sitting, coughing, or sneezing</li>
+        </ul>
+        <p>Unlike general back pain, sciatic pain is usually one-sided and tends to extend well below the knee — sometimes all the way to the toes. These distinctive symptoms tell Dr. Yager a great deal about which nerve root is involved and what's causing the compression.</p>
+
+        <div class="condition-callout">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div>
+            <strong>Chiropractic Is a First-Line Treatment for Sciatica</strong>
+            <p>Research supports chiropractic care as an effective, non-surgical approach for most cases of sciatica. By addressing spinal alignment and reducing disc pressure on the nerve root, chiropractic treatment can resolve sciatic symptoms without medication or surgery in the majority of patients.</p>
+          </div>
+        </div>
+
+        <h2>How Spinal Misalignment Compresses the Sciatic Nerve</h2>
+        <p>Each nerve root exits the lumbar spine through a small opening called the intervertebral foramen. When vertebrae are properly aligned and discs are healthy, these openings are wide enough for the nerve to pass through without any contact. When a vertebra rotates out of alignment or a disc bulges, the foramen narrows — and the nerve root gets squeezed.</p>
+        <p>Even a small amount of compression is enough to trigger the burning, shooting pain of sciatica. And because the nerve is being irritated at its root, the pain travels the entire length of the nerve — which is why sciatica can cause symptoms that seem to have nothing to do with your back at all, like foot numbness or calf weakness.</p>
+
+        <h2>The ProAdjuster Approach to Sciatica Relief</h2>
+        <p>Dr. Yager's approach to sciatica begins with a thorough assessment — including a history, postural and range-of-motion evaluation, and a ProAdjuster spinal analysis. The computer-guided scan identifies which lumbar segments are restricted or misaligned, providing objective data to guide treatment.</p>
+        <p>Treatment with the ProAdjuster is gentle and precise. Rather than applying manual thrust to the lumbar spine — which can be uncomfortable and potentially aggravating for patients with active disc injuries — the ProAdjuster delivers a controlled, instrument-assisted correction. This approach:</p>
+        <ul>
+          <li>Reduces mechanical pressure on the affected nerve root</li>
+          <li>Restores proper motion to restricted lumbar segments</li>
+          <li>Decreases inflammation around the irritated nerve</li>
+          <li>Allows the body to begin the natural healing process</li>
+        </ul>
+        <p>Most sciatica patients see meaningful improvement within the first few weeks of consistent care. Severe or long-standing cases may take longer, but the trajectory is usually a steady, progressive reduction in symptoms.</p>
+
+        <h2>Don't Let Sciatica Keep You Sidelined</h2>
+        <p>Sciatica doesn't get better on its own when there's an underlying structural cause. If rest, stretching, and anti-inflammatories haven't done the job, it's time for a spinal evaluation. Call ProHealth Chiropractic at <strong>(620) 271-0243</strong> or book online to get started. We're located in Garden City, KS and see patients Monday through Thursday.</p>
+
+      </div>
+
+      <aside class="condition-page__sidebar">
+        <div class="sidebar-card sidebar-card--primary">
+          <h3>Get Relief Today</h3>
+          <p>Same-week appointments available. Book online or call us.</p>
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--white btn--block">Book Online</a>
+          <a href="tel:6202710243" class="btn btn--outline-white btn--block" style="margin-top:10px;">Call (620) 271-0243</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>Office Hours</h4>
+          <ul class="sidebar-hours">
+            <li><span>Monday – Thursday</span><span>9am – 5:30pm</span></li>
+            <li class="closed"><span>Friday – Sunday</span><span>Closed</span></li>
+          </ul>
+          <p style="font-size:0.8rem;color:var(--gray);margin-top:8px;">Lunch break 12pm–1pm daily</p>
+        </div>
+        <div class="sidebar-card">
+          <h4>Related Conditions</h4>
+          <ul class="sidebar-links">
+            {relatedConditions.map(c => (
+              <li><a href={c.href}>{c.label} →</a></li>
+            ))}
+          </ul>
+        </div>
+        <div class="sidebar-card sidebar-card--review">
+          <div class="sidebar-stars">★★★★★</div>
+          <p>"I had shooting pain down my leg for months. Nothing helped until I came to Dr. Yager. Within a few weeks the sciatica was gone and I was back to normal life."</p>
+          <strong>— ProHealth Patient</strong>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <CtaBanner />
+  <Footer slot="footer" />
+</Layout>

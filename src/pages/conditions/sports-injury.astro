@@ -1,0 +1,147 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Sports Injury Chiropractor in Garden City, KS",
+  "url": "https://prohealthks.com/conditions/sports-injury",
+  "description": "Sports injury treatment in Garden City, KS — sprains, strains, joint dysfunction, and overuse injuries treated with the ProAdjuster. Dr. James Yager, D.C. focuses on restoring function and return-to-play.",
+  "about": {
+    "@type": "MedicalCondition",
+    "name": "Sports Injury",
+    "possibleTreatment": {
+      "@type": "MedicalTherapy",
+      "name": "Chiropractic Adjustment with ProAdjuster"
+    }
+  }
+};
+
+const relatedConditions = [
+  { href: '/conditions/shoulder-pain', label: 'Shoulder Pain' },
+  { href: '/conditions/back-pain', label: 'Back Pain' },
+  { href: '/conditions/neck-pain', label: 'Neck Pain' },
+  { href: '/conditions/disc-injury', label: 'Disc Injury' },
+  { href: '/conditions/work-injury', label: 'Work Injury' },
+];
+---
+
+<Layout
+  title="Sports Injury Chiropractor in Garden City, KS | ProHealth Chiropractic"
+  description="Recover from sports injuries in Garden City, KS with chiropractic care from Dr. Yager. The ProAdjuster restores function fast — sprains, strains, joint dysfunction, overuse injuries. Call (620) 271-0243."
+  canonical="https://prohealthks.com/conditions/sports-injury"
+  schema={schema}
+  pageClass="page-condition"
+>
+  <Nav slot="nav" />
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <div class="page-hero__content" data-gsap="fade-up">
+        <div class="badge badge--blue">Sports Injury</div>
+        <h1>Sports Injury Chiropractor in Garden City, KS — Get Back in the Game</h1>
+        <p>Sports injuries don't just hurt — they keep you away from the things you love. Whether you're dealing with a fresh sprain or a nagging overuse injury, Dr. Yager's chiropractic approach focuses on restoring full function as quickly as possible so you can return to sport at full speed.</p>
+        <div class="hero__actions" style="margin-top: 28px;">
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--primary btn--lg">Book Your Appointment</a>
+          <a href="tel:6202710243" class="btn btn--outline btn--lg">Call (620) 271-0243</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT + SIDEBAR -->
+  <section class="section condition-page">
+    <div class="container condition-page__inner">
+      <div class="condition-page__content" data-gsap="fade-up">
+
+        <h2>Common Sports Injuries We Treat</h2>
+        <p>At ProHealth Chiropractic in Garden City, we work with athletes of all levels — from high school students playing football and basketball to adult recreational athletes and weekend warriors. The injuries we see most commonly include:</p>
+        <ul>
+          <li><strong>Sprains</strong> — ligament injuries from sudden twisting or impact, often affecting the ankle, knee, or wrist</li>
+          <li><strong>Strains</strong> — muscle or tendon injuries from overexertion, explosive movements, or inadequate warm-up</li>
+          <li><strong>Joint dysfunction</strong> — spinal or extremity joints that lose normal motion following impact, awkward movement, or repetitive stress</li>
+          <li><strong>Overuse injuries</strong> — conditions like patellar tendinitis, shin splints, IT band syndrome, and tennis elbow that develop gradually from repetitive training loads</li>
+          <li><strong>Shoulder injuries</strong> — rotator cuff strains, glenohumeral joint dysfunction, and AC joint sprains from throwing, contact, or overhead sports</li>
+          <li><strong>Neck and spine injuries</strong> — cervical or lumbar strains from contact sports, gymnastics, wrestling, or high-impact activities</li>
+        </ul>
+        <p>We treat both acute injuries — those that just happened — and chronic issues that have been limiting performance for months without fully healing.</p>
+
+        <h2>How Chiropractic Addresses Sports Injuries</h2>
+        <p>Sports injuries often have two components: the tissue damage itself (the sprain, strain, or bruise) and the joint dysfunction that frequently accompanies it. A hard tackle that sprains a shoulder may also cause the surrounding cervical and thoracic vertebrae to shift. A rolled ankle can alter how force travels through the knee and hip. An injured joint that isn't moving properly puts abnormal stress on surrounding tissues and slows the healing process.</p>
+        <p>Chiropractic care addresses the joint dysfunction component — restoring proper motion and alignment to the spine and extremities so that the body can heal efficiently. This is why many athletes find that chiropractic care helps them recover faster than rest alone.</p>
+        <p>At ProHealth Chiropractic, Dr. Yager uses the <strong>ProAdjuster</strong> to assess and correct joint dysfunction with precision and without aggressive manipulation. The computer-guided instrument is effective on both spinal and extremity joints and is gentle enough to use in the acute phase of injury when tissues are inflamed and sensitive.</p>
+
+        <h2>Performance Maintenance Care</h2>
+        <p>Many athletes don't wait until they're injured to visit a chiropractor. Regular chiropractic care during a training season or competitive period serves as a form of proactive maintenance — keeping the spine and joints moving optimally, reducing the risk of overuse injuries, and helping the body recover faster between training sessions.</p>
+        <p>Think of it like getting regular oil changes rather than waiting for the engine to seize. Athletes who receive consistent spinal care often report:</p>
+        <ul>
+          <li>Better range of motion and flexibility</li>
+          <li>Reduced muscle soreness after hard training</li>
+          <li>Improved coordination and body awareness</li>
+          <li>Faster recovery from the physical demands of their sport</li>
+          <li>Fewer training-related aches and injuries</li>
+        </ul>
+        <p>The ProAdjuster's objective measurement capability is particularly useful for maintenance care — Dr. Yager can track your spinal function over time and catch dysfunction before it becomes symptomatic.</p>
+
+        <div class="condition-callout">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div>
+            <strong>Chiropractic Is Standard Care in Professional Sports</strong>
+            <p>Every NFL team employs a team chiropractor. The same is true across major league baseball, the NBA, and Olympic sports programs. Chiropractic care has been recognized as essential for athletic performance and injury recovery at the highest levels of sport for decades.</p>
+          </div>
+        </div>
+
+        <h2>Return-to-Play: Our Focus Is Getting You Back</h2>
+        <p>Dr. Yager understands that for athletes, time away from sport is more than just inconvenient — it affects training schedules, team commitments, and personal goals. His approach to sports injury treatment is always oriented toward return-to-play. This means:</p>
+        <ul>
+          <li>Clear communication about your injury, its severity, and a realistic recovery timeline</li>
+          <li>Treatment that begins as early as safely possible — no unnecessary waiting</li>
+          <li>A progression through care that matches your healing, with modifications as you improve</li>
+          <li>Guidance on what you can and can't do during recovery to avoid re-injury</li>
+        </ul>
+        <p>Most acute sports injuries treated early respond well within a few weeks. Chronic overuse conditions may take longer, but with consistent care and appropriate activity modification, the vast majority of patients return to full activity.</p>
+
+        <h2>Schedule Your Sports Injury Evaluation</h2>
+        <p>Don't let an injury sit and become a chronic problem. Call ProHealth Chiropractic at <strong>(620) 271-0243</strong> or book online to get evaluated quickly. We serve student athletes, adult recreational athletes, and competitive athletes throughout the Garden City, KS area.</p>
+
+      </div>
+
+      <aside class="condition-page__sidebar">
+        <div class="sidebar-card sidebar-card--primary">
+          <h3>Get Relief Today</h3>
+          <p>Same-week appointments available. Book online or call us.</p>
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--white btn--block">Book Online</a>
+          <a href="tel:6202710243" class="btn btn--outline-white btn--block" style="margin-top:10px;">Call (620) 271-0243</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>Office Hours</h4>
+          <ul class="sidebar-hours">
+            <li><span>Monday – Thursday</span><span>9am – 5:30pm</span></li>
+            <li class="closed"><span>Friday – Sunday</span><span>Closed</span></li>
+          </ul>
+          <p style="font-size:0.8rem;color:var(--gray);margin-top:8px;">Lunch break 12pm–1pm daily</p>
+        </div>
+        <div class="sidebar-card">
+          <h4>Related Conditions</h4>
+          <ul class="sidebar-links">
+            {relatedConditions.map(c => (
+              <li><a href={c.href}>{c.label} →</a></li>
+            ))}
+          </ul>
+        </div>
+        <div class="sidebar-card sidebar-card--review">
+          <div class="sidebar-stars">★★★★★</div>
+          <p>"I hurt my back playing basketball and was worried I'd miss the rest of the season. Dr. Yager had me back on the court in two weeks. Incredible."</p>
+          <strong>— ProHealth Patient</strong>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <CtaBanner />
+  <Footer slot="footer" />
+</Layout>

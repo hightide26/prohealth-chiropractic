@@ -1,0 +1,146 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Back Pain Chiropractor in Garden City, KS",
+  "url": "https://prohealthks.com/conditions/back-pain",
+  "description": "ProHealth Chiropractic treats back pain in Garden City, KS using the gentle, computer-guided ProAdjuster — no cracking or twisting. Schedule with Dr. James Yager, D.C.",
+  "about": {
+    "@type": "MedicalCondition",
+    "name": "Back Pain",
+    "possibleTreatment": {
+      "@type": "MedicalTherapy",
+      "name": "Chiropractic Adjustment with ProAdjuster"
+    }
+  }
+};
+
+const relatedConditions = [
+  { href: '/conditions/neck-pain', label: 'Neck Pain' },
+  { href: '/conditions/disc-injury', label: 'Disc Injury' },
+  { href: '/conditions/sciatica', label: 'Sciatica' },
+  { href: '/conditions/work-injury', label: 'Work Injury' },
+  { href: '/conditions/sports-injury', label: 'Sports Injury' },
+];
+---
+
+<Layout
+  title="Back Pain Chiropractor in Garden City, KS | ProHealth Chiropractic"
+  description="Suffering from back pain in Garden City, KS? Dr. Yager uses the ProAdjuster — a gentle, computer-guided system — to find the cause and relieve your pain. Call (620) 271-0243."
+  canonical="https://prohealthks.com/conditions/back-pain"
+  schema={schema}
+  pageClass="page-condition"
+>
+  <Nav slot="nav" />
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <div class="page-hero__content" data-gsap="fade-up">
+        <div class="badge badge--blue">Back Pain</div>
+        <h1>Back Pain Relief in Garden City, KS — Without the Cracking</h1>
+        <p>Back pain is the number one reason people miss work and seek medical care. Whether your pain came on suddenly from lifting or has built up over years, Dr. Yager and the ProAdjuster system can find the root cause and start you on the path to lasting relief.</p>
+        <div class="hero__actions" style="margin-top: 28px;">
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--primary btn--lg">Book Your Appointment</a>
+          <a href="tel:6202710243" class="btn btn--outline btn--lg">Call (620) 271-0243</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT + SIDEBAR -->
+  <section class="section condition-page">
+    <div class="container condition-page__inner">
+      <div class="condition-page__content" data-gsap="fade-up">
+
+        <h2>Why Back Pain Is So Common — and So Persistent</h2>
+        <p>Your lower back bears the weight of everything above it. It bends, rotates, and supports you through every movement you make — which means there are many ways it can be pushed beyond its limits. Back pain affects roughly 80% of adults at some point in their lives, and for many people it becomes a recurring problem that just never fully goes away.</p>
+        <p>The most frustrating thing about back pain is that it often doesn't resolve on its own — it goes quiet for a while, then flares again, usually worse than before. That's because the underlying cause — a misaligned vertebra, a stressed disc, or a nerve under pressure — hasn't been corrected. Rest and pain medication can reduce symptoms temporarily, but they don't fix the structural problem driving your pain.</p>
+
+        <h2>Common Causes of Back Pain We Treat</h2>
+        <p>Back pain isn't one thing — it's a symptom that can arise from several different structures in the spine. At ProHealth Chiropractic, we see a wide range of causes, including:</p>
+        <ul>
+          <li><strong>Disc problems</strong> — bulging, herniated, or degenerative discs that press on nearby nerves</li>
+          <li><strong>Muscle strain</strong> — tears or overstretching from lifting, awkward movements, or overuse</li>
+          <li><strong>Postural stress</strong> — forward-slumped sitting posture that loads the lumbar spine unevenly over time</li>
+          <li><strong>Vertebral subluxation</strong> — spinal joints that have shifted out of proper alignment and are no longer moving freely</li>
+          <li><strong>Sacroiliac joint dysfunction</strong> — problems at the joint where the spine meets the pelvis</li>
+          <li><strong>Facet joint irritation</strong> — inflammation in the small joints along the back of the spine</li>
+          <li><strong>Lifting and workplace injuries</strong> — sudden overload from improper mechanics or unexpected weight</li>
+        </ul>
+        <p>Many patients come to us after weeks or months of rest, anti-inflammatories, and physical therapy that provided limited relief. In many cases, the missing piece is spinal alignment — and that's exactly what chiropractic care addresses.</p>
+
+        <h2>How Dr. Yager Diagnoses and Treats Back Pain</h2>
+        <p>Dr. Yager begins with a thorough consultation and examination to understand exactly where your pain is coming from. This includes reviewing your history, assessing your posture and range of motion, and using the <strong>ProAdjuster</strong> instrument to objectively measure spinal function at each vertebral level.</p>
+        <p>The ProAdjuster sends a light, computerized impulse into each spinal segment and measures how that segment responds. A healthy joint absorbs and returns the energy normally; a restricted or misaligned joint responds abnormally. This gives Dr. Yager a precise, objective picture of where the problem is — not just where you feel the pain, but where the dysfunction actually lives.</p>
+        <p>Treatment uses the same ProAdjuster instrument to deliver a gentle, targeted correction to each affected segment. There is no twisting, no cracking, and no forceful manipulation. Most patients describe the sensation as similar to a light tapping. It's safe even for patients with osteoporosis, previous spinal surgeries, or significant disc injury.</p>
+
+        <div class="condition-callout">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div>
+            <strong>The ProAdjuster Difference</strong>
+            <p>Unlike traditional chiropractic, the ProAdjuster uses computer feedback to confirm that each adjustment is having its intended effect. You get objective data — not just a subjective feel — about whether your spine is improving session to session.</p>
+          </div>
+        </div>
+
+        <h2>What to Expect at Your First Visit</h2>
+        <p>Your first appointment typically lasts 45–60 minutes. Dr. Yager will take a full health history, discuss your pain pattern, and perform a spinal analysis with the ProAdjuster. If chiropractic care is appropriate for your condition, treatment can often begin that same day.</p>
+        <p>Most patients with acute back pain begin to notice improvement within the first 3–5 visits. Chronic back pain — present for months or years — generally requires a longer course of care, but meaningful progress is usually evident within the first two weeks.</p>
+
+        <h2>When Should You See a Chiropractor vs. Wait?</h2>
+        <p>Most uncomplicated back pain does improve on its own within a few days. However, you should seek evaluation promptly if:</p>
+        <ul>
+          <li>Pain is severe or worsening after 48–72 hours</li>
+          <li>Pain radiates into one or both legs (possible nerve involvement)</li>
+          <li>You experience numbness, tingling, or weakness in the legs</li>
+          <li>Pain followed a fall, accident, or significant physical stress</li>
+          <li>You've had multiple back pain episodes over the past year</li>
+          <li>Back pain is affecting your sleep, work, or daily activities</li>
+        </ul>
+        <p>Any of these signs suggest that something beyond simple muscle tension is happening. A chiropractic evaluation can identify the cause quickly and get you on the right path — before the problem becomes harder to treat.</p>
+
+        <h2>Ready to Get Your Back Feeling Better?</h2>
+        <p>ProHealth Chiropractic is located at 2502 N. Johns St., Suite B in Garden City, KS. We see patients Monday through Thursday and typically have same-week availability. Call us at <strong>(620) 271-0243</strong> or book online to schedule your first appointment.</p>
+
+      </div>
+
+      <aside class="condition-page__sidebar">
+        <div class="sidebar-card sidebar-card--primary">
+          <h3>Get Relief Today</h3>
+          <p>Same-week appointments available. Book online or call us.</p>
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--white btn--block">Book Online</a>
+          <a href="tel:6202710243" class="btn btn--outline-white btn--block" style="margin-top:10px;">Call (620) 271-0243</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>Office Hours</h4>
+          <ul class="sidebar-hours">
+            <li><span>Monday – Thursday</span><span>9am – 5:30pm</span></li>
+            <li class="closed"><span>Friday – Sunday</span><span>Closed</span></li>
+          </ul>
+          <p style="font-size:0.8rem;color:var(--gray);margin-top:8px;">Lunch break 12pm–1pm daily</p>
+        </div>
+        <div class="sidebar-card">
+          <h4>Related Conditions</h4>
+          <ul class="sidebar-links">
+            {relatedConditions.map(c => (
+              <li><a href={c.href}>{c.label} →</a></li>
+            ))}
+          </ul>
+        </div>
+        <div class="sidebar-card sidebar-card--review">
+          <div class="sidebar-stars">★★★★★</div>
+          <p>"I had chronic lower back pain for two years and nothing helped. After six visits with Dr. Yager I was back to normal. Wish I had come sooner."</p>
+          <strong>— ProHealth Patient</strong>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <CtaBanner />
+  <Footer slot="footer" />
+</Layout>

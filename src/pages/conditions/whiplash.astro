@@ -1,0 +1,143 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Whiplash Treatment in Garden City, KS",
+  "url": "https://prohealthks.com/conditions/whiplash",
+  "description": "ProHealth Chiropractic treats whiplash in Garden City, KS with the gentle ProAdjuster system. No twisting or cracking — ideal for acute cervical injury. Dr. James Yager, D.C.",
+  "about": {
+    "@type": "MedicalCondition",
+    "name": "Whiplash",
+    "possibleTreatment": {
+      "@type": "MedicalTherapy",
+      "name": "Chiropractic Adjustment with ProAdjuster"
+    }
+  }
+};
+
+const relatedConditions = [
+  { href: '/conditions/auto-accident-injury', label: 'Auto Accident Injury' },
+  { href: '/conditions/neck-pain', label: 'Neck Pain' },
+  { href: '/conditions/headaches-migraines', label: 'Headaches & Migraines' },
+  { href: '/conditions/disc-injury', label: 'Disc Injury' },
+  { href: '/conditions/shoulder-pain', label: 'Shoulder Pain' },
+];
+---
+
+<Layout
+  title="Whiplash Treatment in Garden City, KS | ProHealth Chiropractic"
+  description="Whiplash from a car accident or sports injury? Get gentle, effective treatment in Garden City, KS. Dr. Yager uses the ProAdjuster — no cracking or twisting. Call (620) 271-0243."
+  canonical="https://prohealthks.com/conditions/whiplash"
+  schema={schema}
+  pageClass="page-condition"
+>
+  <Nav slot="nav" />
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <div class="page-hero__content" data-gsap="fade-up">
+        <div class="badge badge--blue">Whiplash</div>
+        <h1>Whiplash Treatment in Garden City, KS — Gentle and Effective</h1>
+        <p>Whiplash can leave you with neck pain, headaches, and stiffness that worsens over days or weeks after the initial injury. Dr. Yager uses the computer-guided ProAdjuster to treat cervical whiplash injuries gently — with no twisting, no cracking, and no aggressive manipulation.</p>
+        <div class="hero__actions" style="margin-top: 28px;">
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--primary btn--lg">Book Your Appointment</a>
+          <a href="tel:6202710243" class="btn btn--outline btn--lg">Call (620) 271-0243</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT + SIDEBAR -->
+  <section class="section condition-page">
+    <div class="container condition-page__inner">
+      <div class="condition-page__content" data-gsap="fade-up">
+
+        <h2>What Is Whiplash?</h2>
+        <p>Whiplash is an injury to the soft tissues and joints of the cervical spine caused by a rapid, forceful back-and-forth movement of the head — similar to the cracking of a whip. The term covers a range of injuries including muscle and ligament strains, disc injury, and vertebral subluxation (joint displacement) in the neck.</p>
+        <p>While the word "whiplash" is most associated with car accidents, the same mechanism can occur in contact sports, a fall, a ride on a roller coaster, or any sudden jolt that causes your head to snap beyond its normal range of motion.</p>
+
+        <h2>How Whiplash Happens</h2>
+        <p>In a rear-end collision — the most common cause — the impact first pushes your torso forward while your head momentarily stays behind. This creates a hyperextension of the cervical spine (backward). Milliseconds later, your head snaps forward into hyperflexion. The entire sequence happens so fast that your muscles have no time to protect the joints and ligaments from the stress.</p>
+        <p>Even low-speed collisions can cause significant soft-tissue damage. Studies have shown that rear-end collisions at as little as 5 mph can produce enough force to strain the cervical ligaments. The severity of your symptoms doesn't always correlate with how hard the car was hit — it depends on your position at impact, the angle of the collision, and individual factors like muscle condition and prior neck health.</p>
+
+        <h2>Whiplash Symptoms — Including Delayed Onset</h2>
+        <p>One of the most important things to understand about whiplash is that symptoms often don't peak immediately. The adrenaline released at the time of injury can mask pain for hours or even days. It's very common to feel only mild soreness after an accident, then wake up the next morning — or two days later — barely able to move your neck.</p>
+        <p>Common whiplash symptoms include:</p>
+        <ul>
+          <li>Neck pain and stiffness — especially pain that worsens with movement</li>
+          <li>Reduced range of motion in the neck</li>
+          <li>Headaches starting at the base of the skull</li>
+          <li>Shoulder or upper back pain</li>
+          <li>Tingling, numbness, or pain radiating into the arm or hand</li>
+          <li>Fatigue and difficulty concentrating ("brain fog")</li>
+          <li>Dizziness or blurred vision in more severe cases</li>
+        </ul>
+
+        <div class="condition-callout condition-callout--warning">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div>
+            <strong>Don't Wait to Be Evaluated</strong>
+            <p>Whiplash that goes untreated often leads to chronic neck pain and long-term stiffness. Getting evaluated and treated within the first 72 hours — even if your symptoms feel mild — gives you the best chance at a full recovery and protects your right to pursue an insurance claim if needed.</p>
+          </div>
+        </div>
+
+        <h2>Why Early Treatment Matters</h2>
+        <p>When whiplash injuries aren't treated promptly, the body attempts to compensate. Surrounding muscles tighten to protect the injured joints, the spine begins to adapt to the altered mechanics, and scar tissue can form in strained ligaments. Over time, these compensatory changes can become their own source of chronic pain — separate from the original injury.</p>
+        <p>Early chiropractic care interrupts this cycle. By restoring proper alignment and motion to the cervical spine before compensatory patterns set in, treatment is faster and more complete. Patients who begin care within days of their injury typically recover faster than those who wait weeks.</p>
+
+        <h2>How the ProAdjuster Treats Whiplash</h2>
+        <p>The ProAdjuster is an ideal tool for whiplash treatment because it's effective without being aggressive. In the acute phase of a whiplash injury — when the neck is inflamed, painful, and guarded — any treatment involving manual twisting or high-velocity manipulation can be too much. The ProAdjuster eliminates that concern entirely.</p>
+        <p>Dr. Yager uses the ProAdjuster to:</p>
+        <ul>
+          <li><strong>Identify affected segments</strong> — the computer maps which cervical levels are restricted or misaligned based on objective resonance measurements</li>
+          <li><strong>Deliver gentle, targeted corrections</strong> — a precise, controlled impulse is applied to each affected segment without any rotation of the neck</li>
+          <li><strong>Track recovery over time</strong> — follow-up scans show how the spine is responding to treatment, providing objective documentation of your progress</li>
+        </ul>
+        <p>Most patients with whiplash begin to notice improved range of motion and reduced pain intensity within the first several visits. Full recovery depends on the severity of the injury and how quickly care was initiated.</p>
+
+        <h2>Schedule Your Whiplash Evaluation Today</h2>
+        <p>If you've been in an accident or experienced any sudden neck injury, don't wait to be seen. ProHealth Chiropractic serves Garden City and the surrounding southwest Kansas area. Call <strong>(620) 271-0243</strong> or book online — we can often see you within 24 to 48 hours.</p>
+
+      </div>
+
+      <aside class="condition-page__sidebar">
+        <div class="sidebar-card sidebar-card--primary">
+          <h3>Get Relief Today</h3>
+          <p>Same-week appointments available. Book online or call us.</p>
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--white btn--block">Book Online</a>
+          <a href="tel:6202710243" class="btn btn--outline-white btn--block" style="margin-top:10px;">Call (620) 271-0243</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>Office Hours</h4>
+          <ul class="sidebar-hours">
+            <li><span>Monday – Thursday</span><span>9am – 5:30pm</span></li>
+            <li class="closed"><span>Friday – Sunday</span><span>Closed</span></li>
+          </ul>
+          <p style="font-size:0.8rem;color:var(--gray);margin-top:8px;">Lunch break 12pm–1pm daily</p>
+        </div>
+        <div class="sidebar-card">
+          <h4>Related Conditions</h4>
+          <ul class="sidebar-links">
+            {relatedConditions.map(c => (
+              <li><a href={c.href}>{c.label} →</a></li>
+            ))}
+          </ul>
+        </div>
+        <div class="sidebar-card sidebar-card--review">
+          <div class="sidebar-stars">★★★★★</div>
+          <p>"After my accident my neck was so stiff and painful I could barely function. Dr. Yager was incredibly gentle and I felt real improvement after just two or three sessions."</p>
+          <strong>— ProHealth Patient</strong>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <CtaBanner />
+  <Footer slot="footer" />
+</Layout>

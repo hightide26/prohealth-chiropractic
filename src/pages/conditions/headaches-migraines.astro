@@ -1,0 +1,144 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Chiropractic for Headaches & Migraines in Garden City, KS",
+  "url": "https://prohealthks.com/conditions/headaches-migraines",
+  "description": "Many headaches and migraines originate in the neck. ProHealth Chiropractic in Garden City, KS uses the ProAdjuster to treat cervicogenic headaches and reduce migraine frequency. Dr. James Yager, D.C.",
+  "about": {
+    "@type": "MedicalCondition",
+    "name": "Headaches and Migraines",
+    "possibleTreatment": {
+      "@type": "MedicalTherapy",
+      "name": "Chiropractic Adjustment with ProAdjuster"
+    }
+  }
+};
+
+const relatedConditions = [
+  { href: '/conditions/neck-pain', label: 'Neck Pain' },
+  { href: '/conditions/whiplash', label: 'Whiplash' },
+  { href: '/conditions/auto-accident-injury', label: 'Auto Accident Injury' },
+  { href: '/conditions/shoulder-pain', label: 'Shoulder Pain' },
+  { href: '/conditions/disc-injury', label: 'Disc Injury' },
+];
+---
+
+<Layout
+  title="Chiropractic for Headaches & Migraines in Garden City, KS | ProHealth"
+  description="Frequent headaches or migraines in Garden City, KS? Many originate in the cervical spine. Dr. Yager uses the ProAdjuster to reduce headache frequency naturally. Call (620) 271-0243."
+  canonical="https://prohealthks.com/conditions/headaches-migraines"
+  schema={schema}
+  pageClass="page-condition"
+>
+  <Nav slot="nav" />
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <div class="page-hero__content" data-gsap="fade-up">
+        <div class="badge badge--blue">Headaches & Migraines</div>
+        <h1>Chiropractic Care for Headaches and Migraines in Garden City, KS</h1>
+        <p>If you suffer from frequent headaches or migraines, the cause may be in your neck — not your head. Dr. Yager's upper cervical approach with the ProAdjuster addresses the structural root of many chronic headaches, helping patients reduce frequency and severity without relying solely on medication.</p>
+        <div class="hero__actions" style="margin-top: 28px;">
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--primary btn--lg">Book Your Appointment</a>
+          <a href="tel:6202710243" class="btn btn--outline btn--lg">Call (620) 271-0243</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT + SIDEBAR -->
+  <section class="section condition-page">
+    <div class="container condition-page__inner">
+      <div class="condition-page__content" data-gsap="fade-up">
+
+        <h2>Not All Headaches Are the Same</h2>
+        <p>Headaches are among the most common health complaints worldwide, but they're not all caused by the same things. Understanding what type of headache you have is the first step toward finding an effective treatment — and chiropractic care is particularly well-suited for specific types.</p>
+        <p>The three types we see most often at ProHealth Chiropractic:</p>
+        <ul>
+          <li><strong>Cervicogenic headaches</strong> — headaches that originate from dysfunction in the cervical spine (neck). The pain typically starts at the base of the skull and travels over the head, often to one side. They're caused by restricted joints, irritated nerves, or tight muscles in the upper cervical region.</li>
+          <li><strong>Tension headaches</strong> — the most common type, characterized by a dull, band-like pressure around the head. Often driven by muscle tension in the neck and shoulders that refers pain upward into the head.</li>
+          <li><strong>Migraines</strong> — a neurological event that causes moderate to severe throbbing pain, often on one side of the head, and may be accompanied by nausea, light sensitivity, and aura. Emerging research indicates that upper cervical dysfunction can be a significant trigger for migraine episodes in susceptible individuals.</li>
+        </ul>
+
+        <h2>The Neck-Headache Connection</h2>
+        <p>Your upper cervical spine — specifically the top two vertebrae, C1 (atlas) and C2 (axis) — has a unique anatomical relationship with the brainstem and the trigeminocervical nucleus, the part of the nervous system that processes pain signals from your head and face. When these vertebrae are misaligned, even slightly, they can sensitize pain pathways and lower the threshold for headache.</p>
+        <p>Research has found that a significant percentage of chronic headache and migraine sufferers have measurable restrictions or misalignments in their upper cervical spine. This is why many patients who have tried multiple medications and treatments finally find relief through chiropractic care — because the structural problem driving the headaches was never addressed.</p>
+        <p>Signs that your headaches may have a cervical origin include:</p>
+        <ul>
+          <li>Headaches that start at the back of the head or neck</li>
+          <li>Pain that's consistently on one side</li>
+          <li>Neck stiffness or soreness that accompanies or precedes the headache</li>
+          <li>Headaches that worsen with certain neck positions or movements</li>
+          <li>History of whiplash, neck injury, or auto accident</li>
+        </ul>
+
+        <h2>How Upper Cervical Chiropractic Reduces Headache Frequency</h2>
+        <p>When C1 and C2 are not moving properly or are out of alignment, the result is a cascade of problems: muscle tension in the suboccipital region (at the base of the skull), irritation of the greater occipital nerve, and sensitization of the trigeminocervical system. Correcting upper cervical alignment interrupts this cascade at the source.</p>
+        <p>At ProHealth Chiropractic, Dr. Yager uses the <strong>ProAdjuster</strong> to assess and treat upper cervical dysfunction with exceptional gentleness and precision. The computer-guided instrument measures the response of each cervical segment and delivers a targeted, controlled correction without any rotation of the neck. For headache patients — who are often sensitive to touch around the neck and head — this approach is particularly well-tolerated.</p>
+        <p>Many headache patients report noticing a difference within the first few visits. Typical improvements include:</p>
+        <ul>
+          <li>Fewer headache days per month</li>
+          <li>Reduced severity when headaches do occur</li>
+          <li>Decreased reliance on pain medication</li>
+          <li>Improved neck mobility and reduced muscle tension</li>
+        </ul>
+
+        <div class="condition-callout">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div>
+            <strong>Chiropractic for Migraines — What Research Shows</strong>
+            <p>A systematic review published in the Journal of Manipulative and Physiological Therapeutics found that chiropractic spinal manipulation resulted in improvements in migraine frequency and severity. The effect was comparable to commonly prescribed preventive medications — without the side effects.</p>
+          </div>
+        </div>
+
+        <h2>What to Expect at Your First Headache Appointment</h2>
+        <p>Dr. Yager will take a thorough history of your headaches — pattern, frequency, triggers, associated symptoms, and what makes them better or worse. He'll then perform a postural and range-of-motion assessment followed by a ProAdjuster scan of the cervical spine. This combination of history and objective spinal data allows him to identify whether cervical dysfunction is contributing to your headaches and develop a treatment plan accordingly.</p>
+        <p>Chiropractic care is not a replacement for your neurologist or headache specialist — it's a complementary approach that addresses the musculoskeletal component of headache disorders. Dr. Yager works alongside your existing healthcare team to give you the most complete picture of what's driving your symptoms.</p>
+
+        <h2>Ready to Reduce Your Headaches?</h2>
+        <p>You don't have to accept frequent headaches as your normal. Call ProHealth Chiropractic at <strong>(620) 271-0243</strong> or book online to schedule your evaluation. We serve Garden City, Dodge City, Liberal, and the surrounding southwest Kansas area.</p>
+
+      </div>
+
+      <aside class="condition-page__sidebar">
+        <div class="sidebar-card sidebar-card--primary">
+          <h3>Get Relief Today</h3>
+          <p>Same-week appointments available. Book online or call us.</p>
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--white btn--block">Book Online</a>
+          <a href="tel:6202710243" class="btn btn--outline-white btn--block" style="margin-top:10px;">Call (620) 271-0243</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>Office Hours</h4>
+          <ul class="sidebar-hours">
+            <li><span>Monday – Thursday</span><span>9am – 5:30pm</span></li>
+            <li class="closed"><span>Friday – Sunday</span><span>Closed</span></li>
+          </ul>
+          <p style="font-size:0.8rem;color:var(--gray);margin-top:8px;">Lunch break 12pm–1pm daily</p>
+        </div>
+        <div class="sidebar-card">
+          <h4>Related Conditions</h4>
+          <ul class="sidebar-links">
+            {relatedConditions.map(c => (
+              <li><a href={c.href}>{c.label} →</a></li>
+            ))}
+          </ul>
+        </div>
+        <div class="sidebar-card sidebar-card--review">
+          <div class="sidebar-stars">★★★★★</div>
+          <p>"I was getting migraines two or three times a week. After a month of care with Dr. Yager I went from that to maybe one every few weeks. It changed my life."</p>
+          <strong>— ProHealth Patient</strong>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <CtaBanner />
+  <Footer slot="footer" />
+</Layout>

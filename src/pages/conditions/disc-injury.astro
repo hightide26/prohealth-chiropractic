@@ -1,0 +1,143 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Disc Injury Chiropractor in Garden City, KS",
+  "url": "https://prohealthks.com/conditions/disc-injury",
+  "description": "Bulging, herniated, or degenerative disc? ProHealth Chiropractic in Garden City, KS uses the gentle ProAdjuster — no forceful manipulation — to treat spinal disc injuries. Dr. James Yager, D.C.",
+  "about": {
+    "@type": "MedicalCondition",
+    "name": "Disc Injury",
+    "possibleTreatment": {
+      "@type": "MedicalTherapy",
+      "name": "Chiropractic Adjustment with ProAdjuster"
+    }
+  }
+};
+
+const relatedConditions = [
+  { href: '/conditions/back-pain', label: 'Back Pain' },
+  { href: '/conditions/sciatica', label: 'Sciatica' },
+  { href: '/conditions/neck-pain', label: 'Neck Pain' },
+  { href: '/conditions/work-injury', label: 'Work Injury' },
+  { href: '/conditions/auto-accident-injury', label: 'Auto Accident Injury' },
+];
+---
+
+<Layout
+  title="Disc Injury Chiropractor in Garden City, KS | ProHealth Chiropractic"
+  description="Bulging or herniated disc in Garden City, KS? The ProAdjuster treats disc injuries gently — no cracking or twisting — making it safe even for severe disc problems. Call (620) 271-0243."
+  canonical="https://prohealthks.com/conditions/disc-injury"
+  schema={schema}
+  pageClass="page-condition"
+>
+  <Nav slot="nav" />
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <div class="page-hero__content" data-gsap="fade-up">
+        <div class="badge badge--blue">Disc Injury</div>
+        <h1>Disc Injury Chiropractor in Garden City, KS</h1>
+        <p>A disc injury can turn everyday activities — sitting, standing, walking — into a painful ordeal. Whether your disc is bulging, herniated, or showing signs of degeneration, Dr. Yager's ProAdjuster approach offers a gentle, effective path to relief without the risks of surgery or the side effects of long-term medication.</p>
+        <div class="hero__actions" style="margin-top: 28px;">
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--primary btn--lg">Book Your Appointment</a>
+          <a href="tel:6202710243" class="btn btn--outline btn--lg">Call (620) 271-0243</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT + SIDEBAR -->
+  <section class="section condition-page">
+    <div class="container condition-page__inner">
+      <div class="condition-page__content" data-gsap="fade-up">
+
+        <h2>Understanding Your Spinal Discs</h2>
+        <p>Spinal discs are the shock-absorbing cushions that sit between each pair of vertebrae throughout your spine. Each disc has two main components: a tough outer ring called the annulus fibrosus, made of layered cartilage fibers, and a soft, gel-like interior called the nucleus pulposus. Together, they distribute compressive loads across the spine, allow for flexibility, and maintain the height of the spaces through which the nerve roots exit.</p>
+        <p>Discs don't have a direct blood supply — they rely on movement and pressure changes to draw in nutrients from surrounding tissues. This makes them slow to heal and vulnerable to degeneration over time, especially under repetitive stress or poor spinal mechanics.</p>
+
+        <h2>Types of Disc Injury</h2>
+        <p>Disc injuries exist on a spectrum, and understanding the type you have helps clarify the treatment approach:</p>
+        <ul>
+          <li><strong>Disc bulge</strong> — the outer wall of the disc remains intact, but the disc bulges outward beyond its normal border, potentially contacting nearby nerve roots. Disc bulges are often caused by cumulative stress rather than a single traumatic event.</li>
+          <li><strong>Herniated disc</strong> — also called a slipped or ruptured disc. The inner nucleus pushes through a tear in the outer annulus. Herniation can cause significant nerve compression, producing sharp, radiating pain, numbness, and weakness along the affected nerve pathway.</li>
+          <li><strong>Degenerative disc disease</strong> — not a disease in the traditional sense, but a gradual loss of disc height and hydration over time. As discs thin, the foraminal openings narrow, increasing nerve root pressure. Osteophytes (bone spurs) may also develop, further compressing nerves.</li>
+          <li><strong>Disc extrusion or sequestration</strong> — in severe cases, disc material can fully break through the annulus (extrusion) or break off entirely (sequestration). These cases require careful evaluation to determine the appropriate course of care.</li>
+        </ul>
+
+        <h2>Symptoms by Location</h2>
+        <p>Where your disc injury is located determines which symptoms you'll experience:</p>
+        <ul>
+          <li><strong>Cervical disc injury (neck)</strong> — pain and stiffness in the neck, headaches, and symptoms that radiate into the shoulder, arm, or hand including numbness, tingling, or weakness</li>
+          <li><strong>Lumbar disc injury (lower back)</strong> — lower back pain, often with radiating pain into the buttock, thigh, calf, or foot (sciatica). Bowel or bladder changes alongside severe symptoms require immediate emergency evaluation.</li>
+          <li><strong>Thoracic disc injury (mid-back)</strong> — less common, but can cause mid-back pain and, in severe cases, rib-wrapping or abdominal symptoms</li>
+        </ul>
+
+        <div class="condition-callout">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div>
+            <strong>Most Disc Injuries Don't Require Surgery</strong>
+            <p>The majority of disc herniations and bulges resolve with conservative care — including chiropractic treatment — within weeks to months. Surgery is generally considered only when conservative care has been exhausted or when there is progressive neurological deficit. Starting with chiropractic care is both appropriate and cost-effective for most disc injury patients.</p>
+          </div>
+        </div>
+
+        <h2>Why the ProAdjuster Is Ideal for Disc Injury</h2>
+        <p>Traditional high-velocity chiropractic adjustments — the kind that produce a popping sound — apply a rotational force to the spine. For patients with active disc injuries, this rotational component can increase intradiscal pressure and potentially aggravate the injury. It's one of the main reasons disc injury patients are sometimes hesitant to try chiropractic care.</p>
+        <p>The ProAdjuster eliminates this concern entirely. The instrument works through a precisely calibrated oscillating force — never a thrust, never a rotation. It restores normal joint motion and improves spinal alignment without placing harmful stress on compromised disc tissue. Dr. Yager uses it to:</p>
+        <ul>
+          <li>Reduce mechanical stress on the affected disc by restoring proper vertebral alignment around it</li>
+          <li>Relieve pressure on compressed nerve roots by opening the foraminal spaces</li>
+          <li>Improve the overall mechanics of the spine so that the disc isn't being re-irritated with every movement</li>
+          <li>Support the body's natural healing process by optimizing spinal function</li>
+        </ul>
+
+        <h2>What to Expect During Recovery</h2>
+        <p>Recovery from a disc injury depends on the severity and type of injury, how long it has been present, and your overall health. Acute disc injuries — those that came on suddenly — often respond within a few weeks. Chronic disc injuries and degenerative disc disease require ongoing care but typically show progressive improvement with consistent treatment.</p>
+        <p>Dr. Yager will reassess your progress regularly using the ProAdjuster's objective measurements and will adjust your treatment plan as needed. He'll also guide you on posture modifications, ergonomic changes, and exercises that help support disc health outside of the office.</p>
+
+        <h2>Schedule Your Disc Injury Evaluation</h2>
+        <p>If you've been told you have a bulging or herniated disc — or if you're experiencing the radiating pain, numbness, or weakness that typically signals nerve involvement — call ProHealth Chiropractic at <strong>(620) 271-0243</strong> or book online. We're located in Garden City, KS and accept most major insurance plans.</p>
+
+      </div>
+
+      <aside class="condition-page__sidebar">
+        <div class="sidebar-card sidebar-card--primary">
+          <h3>Get Relief Today</h3>
+          <p>Same-week appointments available. Book online or call us.</p>
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--white btn--block">Book Online</a>
+          <a href="tel:6202710243" class="btn btn--outline-white btn--block" style="margin-top:10px;">Call (620) 271-0243</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>Office Hours</h4>
+          <ul class="sidebar-hours">
+            <li><span>Monday – Thursday</span><span>9am – 5:30pm</span></li>
+            <li class="closed"><span>Friday – Sunday</span><span>Closed</span></li>
+          </ul>
+          <p style="font-size:0.8rem;color:var(--gray);margin-top:8px;">Lunch break 12pm–1pm daily</p>
+        </div>
+        <div class="sidebar-card">
+          <h4>Related Conditions</h4>
+          <ul class="sidebar-links">
+            {relatedConditions.map(c => (
+              <li><a href={c.href}>{c.label} →</a></li>
+            ))}
+          </ul>
+        </div>
+        <div class="sidebar-card sidebar-card--review">
+          <div class="sidebar-stars">★★★★★</div>
+          <p>"My MRI showed a herniated disc and my doctor mentioned surgery. I decided to try Dr. Yager first. Several months later the pain is gone and I never needed surgery."</p>
+          <strong>— ProHealth Patient</strong>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <CtaBanner />
+  <Footer slot="footer" />
+</Layout>

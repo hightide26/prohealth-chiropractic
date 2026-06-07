@@ -1,0 +1,141 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Shoulder Pain Chiropractor in Garden City, KS",
+  "url": "https://prohealthks.com/conditions/shoulder-pain",
+  "description": "Shoulder pain from rotator cuff issues, impingement, bursitis, or referred neck pain? ProHealth Chiropractic in Garden City, KS addresses the spinal and structural causes. Dr. James Yager, D.C.",
+  "about": {
+    "@type": "MedicalCondition",
+    "name": "Shoulder Pain",
+    "possibleTreatment": {
+      "@type": "MedicalTherapy",
+      "name": "Chiropractic Adjustment with ProAdjuster"
+    }
+  }
+};
+
+const relatedConditions = [
+  { href: '/conditions/neck-pain', label: 'Neck Pain' },
+  { href: '/conditions/sports-injury', label: 'Sports Injury' },
+  { href: '/conditions/work-injury', label: 'Work Injury' },
+  { href: '/conditions/disc-injury', label: 'Disc Injury' },
+  { href: '/conditions/headaches-migraines', label: 'Headaches & Migraines' },
+];
+---
+
+<Layout
+  title="Shoulder Pain Chiropractor in Garden City, KS | ProHealth Chiropractic"
+  description="Shoulder pain in Garden City, KS? Dr. Yager evaluates both the shoulder joint and cervical spine to find the true source of your pain. ProAdjuster — gentle, effective treatment. Call (620) 271-0243."
+  canonical="https://prohealthks.com/conditions/shoulder-pain"
+  schema={schema}
+  pageClass="page-condition"
+>
+  <Nav slot="nav" />
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <div class="page-hero__content" data-gsap="fade-up">
+        <div class="badge badge--blue">Shoulder Pain</div>
+        <h1>Shoulder Pain Relief in Garden City, KS</h1>
+        <p>Shoulder pain can come from the shoulder itself — or from the cervical spine sending referred pain into the arm and shoulder region. Dr. Yager evaluates both to find the true source of your pain and deliver targeted, effective treatment with the ProAdjuster system.</p>
+        <div class="hero__actions" style="margin-top: 28px;">
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--primary btn--lg">Book Your Appointment</a>
+          <a href="tel:6202710243" class="btn btn--outline btn--lg">Call (620) 271-0243</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT + SIDEBAR -->
+  <section class="section condition-page">
+    <div class="container condition-page__inner">
+      <div class="condition-page__content" data-gsap="fade-up">
+
+        <h2>Why Shoulder Pain Is Complicated</h2>
+        <p>The shoulder is the most mobile joint in the human body — capable of rotating and reaching in virtually every direction. This extraordinary range of motion comes at the cost of stability; the shoulder relies heavily on the surrounding musculature, tendons, and a complex arrangement of ligaments to keep it functional and pain-free. When any part of this system is compromised, the result can be pain, weakness, limited range of motion, or all three.</p>
+        <p>What makes shoulder pain particularly challenging to treat is that it often has multiple contributors. Pain felt in the shoulder may originate in the shoulder joint itself — or it may be referred from the cervical spine, where compressed nerve roots send pain signals into the arm and shoulder. Many patients are treated for shoulder problems for months without success because the actual source — the neck — was never evaluated.</p>
+
+        <h2>Common Causes of Shoulder Pain</h2>
+        <ul>
+          <li><strong>Rotator cuff strain or tear</strong> — the rotator cuff is a group of four muscles and their tendons that stabilize the shoulder joint. Overuse, sudden overload (like catching a heavy fall), or repetitive overhead activity can strain or tear these structures.</li>
+          <li><strong>Shoulder impingement syndrome</strong> — when the rotator cuff tendons or the subacromial bursa are compressed between the bones of the shoulder during arm elevation. Impingement is characterized by pain with reaching overhead or behind the back.</li>
+          <li><strong>Bursitis</strong> — inflammation of the subacromial bursa, a fluid-filled sac that cushions the rotator cuff tendons. Often develops alongside impingement or from repetitive motion.</li>
+          <li><strong>AC joint sprain</strong> — the acromioclavicular joint at the top of the shoulder can be sprained in falls or contact sports, causing localized pain at the "point" of the shoulder.</li>
+          <li><strong>Frozen shoulder (adhesive capsulitis)</strong> — progressive stiffening and pain of the shoulder joint capsule, often following a period of immobilization or without clear cause. Motion becomes severely restricted in all directions.</li>
+          <li><strong>Referred pain from the cervical spine</strong> — nerve roots at C5 and C6 supply sensation to the outer shoulder and arm. A bulging disc or misaligned vertebra at these levels can produce shoulder pain that mimics local shoulder pathology.</li>
+        </ul>
+
+        <h2>How Spinal Alignment Affects Shoulder Function</h2>
+        <p>The cervical and thoracic spine have a direct influence on shoulder mechanics that most people don't appreciate. Consider:</p>
+        <ul>
+          <li>The nerve roots that control shoulder and arm muscles exit the lower cervical spine. Cervical subluxations at C4–C6 can create weakness, numbness, or altered muscle tone that affects how the shoulder functions.</li>
+          <li>The thoracic spine (mid-back) and the position of the shoulder blades are mechanically linked. When thoracic mobility is reduced — as it commonly is with prolonged sitting and forward posture — the shoulder blade doesn't move properly on the ribcage. This changes how the shoulder joint loads with every arm movement and sets the stage for impingement and rotator cuff problems.</li>
+          <li>A forward head posture, extremely common in today's screen-heavy world, shifts the mechanics of the entire upper body. The shoulder blades round forward, the rotator cuff operates at a mechanical disadvantage, and the risk of impingement increases significantly.</li>
+        </ul>
+        <p>This is why Dr. Yager evaluates both the shoulder and the cervical and thoracic spine in every shoulder pain patient. Treating the shoulder without addressing the spinal component often produces incomplete or temporary results.</p>
+
+        <div class="condition-callout">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div>
+            <strong>Is Your Shoulder Pain Actually Coming from Your Neck?</strong>
+            <p>If you have shoulder pain that doesn't improve with shoulder-specific treatment, or if the pain is accompanied by arm or hand numbness, tingling, or weakness, a cervical spine evaluation is essential. Referred pain from the neck is frequently mistaken for rotator cuff injury.</p>
+          </div>
+        </div>
+
+        <h2>The ProAdjuster Approach to Shoulder Pain</h2>
+        <p>Dr. Yager's evaluation begins with a thorough history and examination — assessing shoulder range of motion, muscle strength, joint stability, and neurological function in the arm. The ProAdjuster scan of the cervical and thoracic spine provides objective data about which spinal levels may be contributing to your symptoms.</p>
+        <p>Treatment focuses on correcting spinal dysfunction in the cervical and thoracic regions using the gentle ProAdjuster instrument. By restoring normal motion to restricted segments, the treatment:</p>
+        <ul>
+          <li>Relieves pressure on cervical nerve roots that supply the shoulder and arm</li>
+          <li>Improves thoracic mobility, allowing the shoulder blades to move correctly</li>
+          <li>Addresses the postural distortions that load the shoulder improperly</li>
+        </ul>
+        <p>For shoulder pain with a significant local component — rotator cuff strain, bursitis, AC joint sprain — Dr. Yager may also apply the ProAdjuster directly to the glenohumeral or AC joint to reduce joint restriction and improve function. The instrument is safe and effective for extremity joint treatment as well as spinal adjustment.</p>
+
+        <h2>Schedule Your Shoulder Evaluation Today</h2>
+        <p>Don't let shoulder pain limit your work, your sport, or your daily life. Call ProHealth Chiropractic at <strong>(620) 271-0243</strong> or book online. We serve patients throughout Garden City, Dodge City, Liberal, and southwest Kansas — Monday through Thursday. Same-week appointments are typically available.</p>
+
+      </div>
+
+      <aside class="condition-page__sidebar">
+        <div class="sidebar-card sidebar-card--primary">
+          <h3>Get Relief Today</h3>
+          <p>Same-week appointments available. Book online or call us.</p>
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--white btn--block">Book Online</a>
+          <a href="tel:6202710243" class="btn btn--outline-white btn--block" style="margin-top:10px;">Call (620) 271-0243</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>Office Hours</h4>
+          <ul class="sidebar-hours">
+            <li><span>Monday – Thursday</span><span>9am – 5:30pm</span></li>
+            <li class="closed"><span>Friday – Sunday</span><span>Closed</span></li>
+          </ul>
+          <p style="font-size:0.8rem;color:var(--gray);margin-top:8px;">Lunch break 12pm–1pm daily</p>
+        </div>
+        <div class="sidebar-card">
+          <h4>Related Conditions</h4>
+          <ul class="sidebar-links">
+            {relatedConditions.map(c => (
+              <li><a href={c.href}>{c.label} →</a></li>
+            ))}
+          </ul>
+        </div>
+        <div class="sidebar-card sidebar-card--review">
+          <div class="sidebar-stars">★★★★★</div>
+          <p>"My shoulder had been hurting for six months. Turns out most of it was coming from my neck. Dr. Yager figured it out quickly and after a few weeks of treatment I felt like a new person."</p>
+          <strong>— ProHealth Patient</strong>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <CtaBanner />
+  <Footer slot="footer" />
+</Layout>

@@ -1,0 +1,151 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Work Injury Chiropractor in Garden City, KS",
+  "url": "https://prohealthks.com/conditions/work-injury",
+  "description": "Work injury chiropractic care in Garden City, KS. Dr. James Yager treats workplace injuries including lifting injuries, repetitive motion, and slip and falls. Workers' comp accepted.",
+  "about": {
+    "@type": "MedicalCondition",
+    "name": "Work Injury",
+    "possibleTreatment": {
+      "@type": "MedicalTherapy",
+      "name": "Chiropractic Adjustment with ProAdjuster"
+    }
+  }
+};
+
+const relatedConditions = [
+  { href: '/conditions/back-pain', label: 'Back Pain' },
+  { href: '/conditions/sciatica', label: 'Sciatica' },
+  { href: '/conditions/disc-injury', label: 'Disc Injury' },
+  { href: '/conditions/shoulder-pain', label: 'Shoulder Pain' },
+  { href: '/conditions/sports-injury', label: 'Sports Injury' },
+];
+---
+
+<Layout
+  title="Work Injury Chiropractor in Garden City, KS | ProHealth Chiropractic"
+  description="Injured at work in Garden City, KS? ProHealth Chiropractic treats workplace injuries and works with Kansas workers' comp. Dr. Yager provides thorough documentation for your claim. Call (620) 271-0243."
+  canonical="https://prohealthks.com/conditions/work-injury"
+  schema={schema}
+  pageClass="page-condition"
+>
+  <Nav slot="nav" />
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <div class="page-hero__content" data-gsap="fade-up">
+        <div class="badge badge--blue">Work Injury</div>
+        <h1>Work Injury Chiropractor in Garden City, KS</h1>
+        <p>Workplace injuries can happen in an instant or build up over months of repetitive strain. Either way, you have the right to treatment — and in Kansas, chiropractic care is a covered benefit under workers' compensation. Dr. Yager provides effective treatment and thorough documentation to support your claim and your recovery.</p>
+        <div class="hero__actions" style="margin-top: 28px;">
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--primary btn--lg">Book Your Appointment</a>
+          <a href="tel:6202710243" class="btn btn--outline btn--lg">Call (620) 271-0243</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT + SIDEBAR -->
+  <section class="section condition-page">
+    <div class="container condition-page__inner">
+      <div class="condition-page__content" data-gsap="fade-up">
+
+        <h2>Common Workplace Injuries We Treat</h2>
+        <p>Garden City's economy includes meatpacking, agriculture, construction, logistics, and healthcare — industries with real physical demands and real risks. The most frequent work-related injuries we see at ProHealth Chiropractic include:</p>
+        <ul>
+          <li><strong>Lifting and overexertion injuries</strong> — lower back strains, disc injuries, and hernias from improper lifting technique or lifting more than the body can handle</li>
+          <li><strong>Repetitive motion injuries</strong> — cumulative damage to joints, tendons, and nerves from performing the same movement hundreds of times per day. Common examples include carpal tunnel syndrome, rotator cuff tendinitis, and cervical strain from sustained awkward neck positions.</li>
+          <li><strong>Slip and fall injuries</strong> — sudden impacts to the spine, shoulders, knees, or wrists from falls on slippery or uneven surfaces</li>
+          <li><strong>Sustained posture injuries</strong> — chronic spinal stress from prolonged sitting at a desk, standing at a workstation, or operating equipment in a fixed position</li>
+          <li><strong>Struck-by and impact injuries</strong> — trauma to the spine or extremities from falling objects, machinery contact, or collisions</li>
+        </ul>
+
+        <h2>Kansas Workers' Compensation and Chiropractic Coverage</h2>
+        <p>Under Kansas workers' compensation law, injured workers are entitled to receive medical treatment for job-related injuries — and chiropractic care is explicitly covered as a legitimate medical service. If you've been injured at work, your employer's workers' comp insurance should cover the cost of your chiropractic evaluation and treatment.</p>
+        <p>Here's what you need to know:</p>
+        <ul>
+          <li>Report your injury to your employer as soon as possible — Kansas law requires timely reporting</li>
+          <li>Seek medical evaluation promptly — delays can complicate your claim</li>
+          <li>You have the right to chiropractic care as part of your workers' comp treatment</li>
+          <li>Authorized treating providers must be approved through your employer's insurer — contact us and we can help clarify your options</li>
+        </ul>
+        <p>If you're unsure about the workers' comp process, our office can point you in the right direction. We work with injured workers and their employers regularly and understand the documentation and reporting requirements.</p>
+
+        <div class="condition-callout condition-callout--warning">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div>
+            <strong>Report Your Injury and Seek Care Promptly</strong>
+            <p>Kansas has strict deadlines for reporting work injuries and filing workers' compensation claims. Delays in reporting or seeking treatment can be used to dispute the legitimacy of your claim. Get evaluated quickly to protect your rights and start your recovery.</p>
+          </div>
+        </div>
+
+        <h2>Documentation That Protects Your Claim</h2>
+        <p>One of the most important things a treating chiropractor does for work injury patients is create a thorough, accurate medical record. This documentation is essential if your case is disputed by the insurance carrier or if you need to demonstrate the extent of your injury for any legal proceedings.</p>
+        <p>At ProHealth Chiropractic, Dr. Yager's documentation includes:</p>
+        <ul>
+          <li>A detailed account of how the injury occurred, the onset of symptoms, and the initial physical findings</li>
+          <li>Objective spinal analysis data from the ProAdjuster, which provides a computerized, reproducible measurement of spinal function at each visit</li>
+          <li>Progress notes tracking your improvement — or lack thereof — over the course of treatment</li>
+          <li>Work restriction and return-to-work recommendations when appropriate</li>
+          <li>A final assessment of your condition at the conclusion of active care</li>
+        </ul>
+        <p>This level of documentation is valuable not only for insurance purposes, but also for ensuring that your treatment is guided by objective data rather than guesswork.</p>
+
+        <h2>How the ProAdjuster Treats Acute Workplace Injuries</h2>
+        <p>Work injuries often involve acute inflammation — the spine or an injured joint is painful, swollen, and guarded. In this state, traditional manual chiropractic manipulation can be too aggressive and uncomfortable. The ProAdjuster is particularly well-suited for the acute phase of workplace injury treatment because:</p>
+        <ul>
+          <li>It delivers a gentle, controlled impulse rather than a manual thrust</li>
+          <li>There is no twisting, rotation, or forceful movement of injured tissue</li>
+          <li>The computer can identify affected segments precisely, so treatment is targeted rather than broad</li>
+          <li>It's effective even when patients can't lie flat comfortably due to pain</li>
+        </ul>
+        <p>As the acute phase resolves and the spine becomes less guarded, Dr. Yager adjusts the treatment approach accordingly — increasing frequency of care and adding rehabilitative guidance to help you return to work safely.</p>
+
+        <h2>Get Evaluated — Your Recovery Starts Here</h2>
+        <p>If you've been injured at work, don't wait to be seen. The sooner you receive proper care, the faster and more completely you'll recover — and the stronger your workers' comp claim will be. Call ProHealth Chiropractic at <strong>(620) 271-0243</strong> or book online. We're located at 2502 N. Johns St., Suite B in Garden City, KS.</p>
+
+      </div>
+
+      <aside class="condition-page__sidebar">
+        <div class="sidebar-card sidebar-card--primary">
+          <h3>Get Relief Today</h3>
+          <p>Same-week appointments available. Book online or call us.</p>
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--white btn--block">Book Online</a>
+          <a href="tel:6202710243" class="btn btn--outline-white btn--block" style="margin-top:10px;">Call (620) 271-0243</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>Office Hours</h4>
+          <ul class="sidebar-hours">
+            <li><span>Monday – Thursday</span><span>9am – 5:30pm</span></li>
+            <li class="closed"><span>Friday – Sunday</span><span>Closed</span></li>
+          </ul>
+          <p style="font-size:0.8rem;color:var(--gray);margin-top:8px;">Lunch break 12pm–1pm daily</p>
+        </div>
+        <div class="sidebar-card">
+          <h4>Related Conditions</h4>
+          <ul class="sidebar-links">
+            {relatedConditions.map(c => (
+              <li><a href={c.href}>{c.label} →</a></li>
+            ))}
+          </ul>
+        </div>
+        <div class="sidebar-card sidebar-card--review">
+          <div class="sidebar-stars">★★★★★</div>
+          <p>"I hurt my back on the job and Dr. Yager helped me through the whole process — treatment and all the paperwork for my claim. He really cares about his patients."</p>
+          <strong>— ProHealth Patient</strong>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <CtaBanner />
+  <Footer slot="footer" />
+</Layout>

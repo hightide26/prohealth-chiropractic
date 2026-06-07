@@ -1,0 +1,140 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Neck Pain Chiropractor in Garden City, KS",
+  "url": "https://prohealthks.com/conditions/neck-pain",
+  "description": "ProHealth Chiropractic treats neck pain in Garden City, KS with the gentle, computer-guided ProAdjuster. No cracking or twisting. Dr. James Yager, D.C. — call (620) 271-0243.",
+  "about": {
+    "@type": "MedicalCondition",
+    "name": "Neck Pain",
+    "possibleTreatment": {
+      "@type": "MedicalTherapy",
+      "name": "Chiropractic Adjustment with ProAdjuster"
+    }
+  }
+};
+
+const relatedConditions = [
+  { href: '/conditions/whiplash', label: 'Whiplash' },
+  { href: '/conditions/headaches-migraines', label: 'Headaches & Migraines' },
+  { href: '/conditions/disc-injury', label: 'Disc Injury' },
+  { href: '/conditions/shoulder-pain', label: 'Shoulder Pain' },
+  { href: '/conditions/auto-accident-injury', label: 'Auto Accident Injury' },
+];
+---
+
+<Layout
+  title="Neck Pain Chiropractor in Garden City, KS | ProHealth Chiropractic"
+  description="Neck pain from posture, tech neck, whiplash, or arthritis? Dr. Yager uses the ProAdjuster to gently restore cervical spine motion without cracking. Garden City, KS. Call (620) 271-0243."
+  canonical="https://prohealthks.com/conditions/neck-pain"
+  schema={schema}
+  pageClass="page-condition"
+>
+  <Nav slot="nav" />
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <div class="page-hero__content" data-gsap="fade-up">
+        <div class="badge badge--blue">Neck Pain</div>
+        <h1>Neck Pain Chiropractor in Garden City, KS</h1>
+        <p>Neck pain can make every part of your day harder — turning to check traffic, sleeping through the night, focusing at work. Dr. Yager uses the computer-guided ProAdjuster to gently restore normal cervical spine motion and take the pressure off irritated nerves, without any twisting or cracking.</p>
+        <div class="hero__actions" style="margin-top: 28px;">
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--primary btn--lg">Book Your Appointment</a>
+          <a href="tel:6202710243" class="btn btn--outline btn--lg">Call (620) 271-0243</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT + SIDEBAR -->
+  <section class="section condition-page">
+    <div class="container condition-page__inner">
+      <div class="condition-page__content" data-gsap="fade-up">
+
+        <h2>Why Neck Pain Is So Widespread</h2>
+        <p>The cervical spine — the seven vertebrae of your neck — has to balance a head that weighs 10 to 12 pounds while allowing nearly 180 degrees of rotation. It's one of the most mobile and most vulnerable regions of the spine. Add hours of looking down at phones and computer screens each day, and it's no surprise that neck pain has become one of the most common complaints we see at ProHealth Chiropractic in Garden City.</p>
+        <p>The problem is rarely just muscular. When cervical vertebrae lose proper alignment and motion, they irritate the surrounding joints, compress spinal discs, and put pressure on the nerves that exit the spine through that level. The result can be anything from a dull, persistent ache to sharp pain, stiffness, headaches, or pain that radiates into the arm and hand.</p>
+
+        <h2>Common Causes of Neck Pain</h2>
+        <ul>
+          <li><strong>Tech neck / forward head posture</strong> — every inch your head drifts forward adds roughly 10 lbs of effective load to your cervical spine. Hours of screen time compound this daily.</li>
+          <li><strong>Whiplash and auto accidents</strong> — rapid forward-backward motion of the head strains the muscles and ligaments of the cervical spine and can displace vertebrae.</li>
+          <li><strong>Cervical arthritis</strong> — wear and tear on the facet joints and discs narrows the space available for nerves and reduces joint mobility.</li>
+          <li><strong>Sleeping position</strong> — sleeping on your stomach or with a pillow that's too thick or too flat can hold your neck in a stressed position for hours.</li>
+          <li><strong>Repetitive motion and work posture</strong> — sustained awkward positions at workstations, assembly lines, or manual labor cause cumulative joint stress.</li>
+          <li><strong>Disc injury</strong> — a bulging or herniated cervical disc presses directly on nearby nerve roots, causing neck pain that may radiate into the arm.</li>
+        </ul>
+
+        <h2>The Cervical Spine — A Quick Overview</h2>
+        <p>Your neck is made up of seven vertebrae (C1 through C7) separated by gel-filled discs that act as shock absorbers. Eight pairs of nerve roots exit through openings between the vertebrae — these nerves supply sensation and motor control to your shoulders, arms, and hands. The uppermost vertebrae (C1 and C2) also directly influence blood flow to the brain and the function of the brainstem, which is why upper cervical problems can trigger headaches and even dizziness.</p>
+        <p>When a vertebra shifts out of its normal position — even slightly — it can reduce the space for a nerve root, alter disc pressure, and trigger the surrounding muscles to tighten protectively. This is called a subluxation, and it's the central problem chiropractic care is designed to correct.</p>
+
+        <div class="condition-callout">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div>
+            <strong>Neck Pain and Headaches Are Often Connected</strong>
+            <p>Many chronic headache sufferers are actually experiencing cervicogenic headaches — headaches that originate in the neck. When Dr. Yager corrects upper cervical alignment, headache frequency and severity often improve significantly alongside the neck pain itself.</p>
+          </div>
+        </div>
+
+        <h2>How the ProAdjuster Gently Restores Neck Motion</h2>
+        <p>Traditional chiropractic adjustments of the cervical spine involve manual manipulation — the rapid, twisting movements some patients find uncomfortable or anxiety-inducing. At ProHealth Chiropractic, Dr. Yager takes a different approach using the <strong>ProAdjuster</strong> instrument.</p>
+        <p>The ProAdjuster works through a process called resonance. It sends a gentle, computerized impulse into each cervical segment and measures how the joint responds. Restricted or misaligned segments respond differently than healthy ones — the computer identifies the problem and Dr. Yager uses the same instrument to deliver a precise, targeted correction. The sensation is gentle: most patients describe it as a light, rhythmic tapping.</p>
+        <p>This approach is especially valuable in the neck because:</p>
+        <ul>
+          <li>There's no rotational force applied to the cervical spine</li>
+          <li>Treatment is comfortable even for patients with arthritis, disc injury, or significant stiffness</li>
+          <li>The computer confirms that movement is being restored — Dr. Yager can see in real time that the adjustment is working</li>
+        </ul>
+
+        <h2>What to Expect During Treatment</h2>
+        <p>Most neck pain patients begin to notice increased range of motion and reduced stiffness within the first few visits. Full resolution depends on how long the problem has been present, the underlying cause, and how consistently you can attend treatment. Acute neck pain from a recent strain or awkward movement often responds quickly — within a week or two. Chronic neck pain that has been building for months or years requires more consistent care but tends to respond well to the ProAdjuster approach.</p>
+        <p>Dr. Yager will also discuss posture, ergonomics, and home exercises that support your recovery between visits — so you're not dependent on the office to feel well long-term.</p>
+
+        <h2>Schedule Your Neck Pain Evaluation</h2>
+        <p>ProHealth Chiropractic is located at 2502 N. Johns St., Suite B, Garden City, KS 67846. Call us at <strong>(620) 271-0243</strong> or book online — we typically have same-week availability and are open Monday through Thursday.</p>
+
+      </div>
+
+      <aside class="condition-page__sidebar">
+        <div class="sidebar-card sidebar-card--primary">
+          <h3>Get Relief Today</h3>
+          <p>Same-week appointments available. Book online or call us.</p>
+          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--white btn--block">Book Online</a>
+          <a href="tel:6202710243" class="btn btn--outline-white btn--block" style="margin-top:10px;">Call (620) 271-0243</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>Office Hours</h4>
+          <ul class="sidebar-hours">
+            <li><span>Monday – Thursday</span><span>9am – 5:30pm</span></li>
+            <li class="closed"><span>Friday – Sunday</span><span>Closed</span></li>
+          </ul>
+          <p style="font-size:0.8rem;color:var(--gray);margin-top:8px;">Lunch break 12pm–1pm daily</p>
+        </div>
+        <div class="sidebar-card">
+          <h4>Related Conditions</h4>
+          <ul class="sidebar-links">
+            {relatedConditions.map(c => (
+              <li><a href={c.href}>{c.label} →</a></li>
+            ))}
+          </ul>
+        </div>
+        <div class="sidebar-card sidebar-card--review">
+          <div class="sidebar-stars">★★★★★</div>
+          <p>"My neck was so stiff I couldn't turn my head to drive. Dr. Yager had me moving freely again in just a few visits — and the ProAdjuster didn't hurt at all."</p>
+          <strong>— ProHealth Patient</strong>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <CtaBanner />
+  <Footer slot="footer" />
+</Layout>
