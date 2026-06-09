@@ -1,0 +1,209 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import { getAllPosts } from '../../lib/sanity';
+
+const posts = await getAllPosts();
+
+function formatDate(str: string) {
+  return new Date(str).toLocaleDateString('en-US', {
+    year: 'numeric', month: 'long', day: 'numeric'
+  });
+}
+---
+
+<Layout
+  title="Chiropractic Blog | ProHealth Chiropractic | Garden City, KS"
+  description="Tips, answers, and insights from Dr. James Yager at ProHealth Chiropractic Wellness Centers in Garden City, Kansas. Back pain, auto accidents, insurance, wellness, and more."
+  canonical="https://prohealthks.com/blog"
+  pageClass="page-blog"
+>
+  <Nav slot="nav" activePage="Blog" />
+
+  <!-- HERO -->
+  <section class="page-hero page-hero--short">
+    <div class="container page-hero__inner">
+      <div class="page-hero__content" data-gsap="fade-up">
+        <div class="badge badge--blue">ProHealth Blog</div>
+        <h1>Health Tips &amp; Answers<br /><em>From Dr. Yager</em></h1>
+        <p>Real guidance on back pain, auto accidents, chiropractic care, and living well in Garden City, Kansas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSTS GRID -->
+  <section class="section blog-index">
+    <div class="container">
+      {posts.length === 0 ? (
+        <div class="blog-empty">
+          <p>Posts are on their way. Check back soon — we're working on our first articles.</p>
+          <a href="/contact" class="btn btn--primary" style="margin-top:16px;">Questions? Contact Us</a>
+        </div>
+      ) : (
+        <div class="blog-grid">
+          {posts.map((post: any) => (
+            <article class="blog-card" data-gsap="fade-up">
+              {post.coverImage && (
+                <div class="blog-card__img-wrap">
+                  <img
+                    src={`https://cdn.sanity.io/images/loclhcox/production/${post.coverImage.asset._ref.replace('image-', '').replace(/-(\w+)$/, '.$1')}`}
+                    alt={post.coverImage.alt || post.title}
+                    loading="lazy"
+                    width="600"
+                    height="340"
+                  />
+                </div>
+              )}
+              <div class="blog-card__body">
+                {post.categories?.length > 0 && (
+                  <div class="blog-card__cats">
+                    {post.categories.map((cat: any) => (
+                      <span class="blog-cat-tag">{cat.title}</span>
+                    ))}
+                  </div>
+                )}
+                <h2 class="blog-card__title">
+                  <a href={`/blog/${post.slug.current}`}>{post.title}</a>
+                </h2>
+                {post.excerpt && <p class="blog-card__excerpt">{post.excerpt}</p>}
+                <div class="blog-card__meta">
+                  <span>{post.author?.name || 'Dr. James Yager, DC'}</span>
+                  <span>·</span>
+                  <time datetime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
+                </div>
+                <a href={`/blog/${post.slug.current}`} class="blog-card__read">Read Article →</a>
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <CtaBanner
+    heading="Ready to Stop Living With Pain?"
+    subtext="Dr. Yager uses the ProAdjuster — no cracking, no twisting. Just results."
+    primaryLabel="Book an Appointment"
+    secondaryLabel="Call (620) 271-0243"
+  />
+
+  <Footer slot="footer" />
+</Layout>
+
+<style>
+.page-hero--short { padding: 80px 0 60px; }
+
+.blog-index { padding: 60px 0 80px; }
+
+.blog-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.blog-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.blog-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.blog-card__img-wrap {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.blog-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.blog-card:hover .blog-card__img-wrap img {
+  transform: scale(1.04);
+}
+
+.blog-card__body {
+  padding: 22px 24px 26px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.blog-card__cats {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.blog-cat-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-tint);
+  padding: 3px 9px;
+  border-radius: 20px;
+}
+
+.blog-card__title {
+  font-size: 1.05rem;
+  font-family: var(--font-heading);
+  color: var(--navy);
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+.blog-card__title a {
+  color: inherit;
+  text-decoration: none;
+}
+.blog-card__title a:hover { color: var(--blue); }
+
+.blog-card__excerpt {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 14px;
+  flex: 1;
+}
+
+.blog-card__meta {
+  display: flex;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.blog-card__read {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--blue);
+  text-decoration: none;
+}
+.blog-card__read:hover { text-decoration: underline; }
+
+@media (max-width: 900px) {
+  .blog-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .blog-grid { grid-template-columns: 1fr; }
+}
+</style>

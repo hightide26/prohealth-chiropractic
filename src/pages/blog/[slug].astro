@@ -1,0 +1,316 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import { getAllPosts, getPostBySlug } from '../../lib/sanity';
+
+export async function getStaticPaths() {
+  const posts = await getAllPosts();
+  return posts.map((post: any) => ({
+    params: { slug: post.slug.current },
+  }));
+}
+
+const { slug } = Astro.params;
+const post = await getPostBySlug(slug!);
+
+if (!post) {
+  return Astro.redirect('/404');
+}
+
+function formatDate(str: string) {
+  return new Date(str).toLocaleDateString('en-US', {
+    year: 'numeric', month: 'long', day: 'numeric'
+  });
+}
+
+// Render portable text blocks to HTML
+function renderBlocks(blocks: any[]): string {
+  if (!blocks) return '';
+  return blocks.map((block: any) => {
+    if (block._type === 'block') {
+      const text = block.children?.map((child: any) => {
+        let t = child.text || '';
+        if (child.marks?.includes('strong')) t = `<strong>${t}</strong>`;
+        if (child.marks?.includes('em')) t = `<em>${t}</em>`;
+        return t;
+      }).join('') || '';
+
+      const style = block.style || 'normal';
+      if (style === 'h2') return `<h2>${text}</h2>`;
+      if (style === 'h3') return `<h3>${text}</h3>`;
+      if (style === 'h4') return `<h4>${text}</h4>`;
+      if (style === 'blockquote') return `<blockquote>${text}</blockquote>`;
+      if (block.listItem === 'bullet') return `<li>${text}</li>`;
+      if (block.listItem === 'number') return `<li>${text}</li>`;
+      return `<p>${text}</p>`;
+    }
+    if (block._type === 'image' && block.asset?._ref) {
+      const src = `https://cdn.sanity.io/images/loclhcox/production/${block.asset._ref.replace('image-', '').replace(/-(\w+)$/, '.$1')}`;
+      const alt = block.alt || '';
+      const caption = block.caption ? `<figcaption>${block.caption}</figcaption>` : '';
+      return `<figure><img src="${src}" alt="${alt}" loading="lazy" />${caption}</figure>`;
+    }
+    return '';
+  }).join('\n');
+}
+
+const bodyHtml = post.body ? renderBlocks(post.body) : '';
+const coverSrc = post.coverImage?.asset?._ref
+  ? `https://cdn.sanity.io/images/loclhcox/production/${post.coverImage.asset._ref.replace('image-', '').replace(/-(\w+)$/, '.$1')}`
+  : null;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.seoTitle || post.title,
+  "description": post.seoDescription || post.excerpt,
+  "datePublished": post.publishedAt,
+  "author": {
+    "@type": "Person",
+    "name": post.author?.name || "Dr. James Yager, DC"
+  },
+  "publisher": {
+    "@type": "MedicalBusiness",
+    "name": "ProHealth Chiropractic Wellness Centers",
+    "url": "https://prohealthks.com"
+  },
+  "url": `https://prohealthks.com/blog/${post.slug.current}`
+};
+---
+
+<Layout
+  title={`${post.seoTitle || post.title} | ProHealth Chiropractic`}
+  description={post.seoDescription || post.excerpt}
+  canonical={`https://prohealthks.com/blog/${post.slug.current}`}
+  schema={schema}
+  pageClass="page-blog-post"
+>
+  <Nav slot="nav" activePage="Blog" />
+
+  <article class="blog-post">
+    <div class="container blog-post__inner">
+
+      <!-- HEADER -->
+      <header class="blog-post__header" data-gsap="fade-up">
+        {post.categories?.length > 0 && (
+          <div class="blog-post__cats">
+            {post.categories.map((cat: any) => (
+              <span class="blog-cat-tag">{cat.title}</span>
+            ))}
+          </div>
+        )}
+        <h1>{post.title}</h1>
+        <div class="blog-post__meta">
+          <span>By {post.author?.name || 'Dr. James Yager, DC'}</span>
+          <span>·</span>
+          <time datetime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
+        </div>
+        {post.excerpt && <p class="blog-post__excerpt">{post.excerpt}</p>}
+      </header>
+
+      {coverSrc && (
+        <div class="blog-post__cover" data-gsap="fade-up">
+          <img
+            src={coverSrc}
+            alt={post.coverImage?.alt || post.title}
+            width="900"
+            height="500"
+            loading="eager"
+          />
+        </div>
+      )}
+
+      <!-- TWO COLUMN: body + sidebar -->
+      <div class="blog-post__layout">
+
+        <!-- BODY -->
+        <div class="blog-post__body prose" data-gsap="fade-up" set:html={bodyHtml} />
+
+        <!-- SIDEBAR -->
+        <aside class="blog-post__sidebar">
+          <div class="sidebar-card sidebar-card--primary">
+            <h3>Book an Appointment</h3>
+            <p>New patients welcome. Same-week availability most weeks.</p>
+            <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--white btn--block">Book Online</a>
+            <a href="tel:6202710243" class="btn btn--outline-white btn--block" style="margin-top:10px;">Call (620) 271-0243</a>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>Office Hours</h4>
+            <ul class="sidebar-hours">
+              <li><span>Monday – Thursday</span><span>9am – 5:30pm</span></li>
+              <li class="closed"><span>Friday – Sunday</span><span>Closed</span></li>
+            </ul>
+            <p style="font-size:0.8rem;color:var(--gray);margin-top:8px;">Lunch break 12pm–1pm daily</p>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>Popular Articles</h4>
+            <ul class="sidebar-links">
+              <li><a href="/conditions/auto-accident-injury">Auto Accident Care in Kansas →</a></li>
+              <li><a href="/conditions/back-pain">Back Pain Treatment →</a></li>
+              <li><a href="/services/proadjuster">What Is the ProAdjuster? →</a></li>
+              <li><a href="/conditions/sciatica">Sciatica Relief →</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card sidebar-card--review">
+            <div class="sidebar-stars">★★★★★</div>
+            <p>"The ProAdjuster is incredible. Dr. Yager is thorough, knowledgeable, and actually listens."</p>
+            <strong>— Garden City Patient</strong>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+  <CtaBanner
+    heading="Ready to Feel Better?"
+    subtext="ProHealth Chiropractic — Garden City's home for computer-guided, no-cracking chiropractic care."
+    primaryLabel="Book Your Visit"
+    secondaryLabel="Call (620) 271-0243"
+  />
+
+  <Footer slot="footer" />
+</Layout>
+
+<style>
+.blog-post {
+  padding: 60px 0 80px;
+}
+
+.blog-post__inner {
+  max-width: 1100px;
+}
+
+.blog-post__header {
+  max-width: 760px;
+  margin-bottom: 36px;
+}
+
+.blog-post__cats {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.blog-cat-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-tint);
+  padding: 3px 9px;
+  border-radius: 20px;
+}
+
+.blog-post__header h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.blog-post__meta {
+  display: flex;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.blog-post__excerpt {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  border-left: 3px solid var(--blue);
+  padding-left: 16px;
+  margin: 0;
+}
+
+.blog-post__cover {
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+.blog-post__cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.blog-post__layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Prose styles */
+.prose :global(h2) {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--navy);
+  margin: 36px 0 14px;
+}
+.prose :global(h3) {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--navy);
+  margin: 28px 0 10px;
+}
+.prose :global(p) {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-body);
+  margin-bottom: 18px;
+}
+.prose :global(ul),
+.prose :global(ol) {
+  padding-left: 24px;
+  margin-bottom: 18px;
+}
+.prose :global(li) {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-body);
+  margin-bottom: 6px;
+}
+.prose :global(blockquote) {
+  border-left: 4px solid var(--blue);
+  padding: 12px 20px;
+  background: var(--blue-tint);
+  border-radius: 0 8px 8px 0;
+  margin: 24px 0;
+  font-style: italic;
+  color: var(--text-muted);
+}
+.prose :global(figure) {
+  margin: 28px 0;
+}
+.prose :global(figure img) {
+  width: 100%;
+  border-radius: 10px;
+}
+.prose :global(figcaption) {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 6px;
+}
+.prose :global(strong) { color: var(--navy); }
+
+@media (max-width: 900px) {
+  .blog-post__layout {
+    grid-template-columns: 1fr;
+  }
+  .blog-post__sidebar {
+    order: -1;
+  }
+}
+</style>
