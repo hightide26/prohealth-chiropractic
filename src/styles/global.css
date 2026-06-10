@@ -4,30 +4,31 @@
    ============================================================ */
 
 :root {
-  --blue:        #1B5EAE;
-  --blue-mid:    #2E75B6;
-  --blue-light:  #5B9BD5;
-  --blue-pale:   #EBF3FB;
-  --blue-tint:   #F4F8FD;
-  --navy:        #0F2A45;
-  --navy-mid:    #1A3A5C;
+  /* ProAdjuster brand palette — sampled from official logo */
+  --blue:        #0898D8;   /* brand azure (PRO wordmark) */
+  --blue-mid:    #0A6FA8;   /* deeper azure — hovers, links */
+  --blue-light:  #60C8F0;   /* brand light square */
+  --blue-pale:   #E1F3FC;   /* pale azure tint */
+  --blue-tint:   #F1FAFE;   /* faint azure wash */
+  --navy:        #202A33;   /* brand charcoal-navy (ADJUSTER wordmark) */
+  --navy-mid:    #2E3C48;
 
   --teal:        #2B7A6F;
   --teal-light:  #E6F4F2;
 
   --white:       #FFFFFF;
   --bg:          #FFFFFF;
-  --bg-alt:      #F4F8FD;
-  --border:      #D6E4F0;
+  --bg-alt:      #F1FAFE;
+  --border:      #D2E8F5;
 
-  --text-primary: #0F2A45;
-  --text-body:    #2D4A62;
-  --text-muted:   #5F7E96;
-  --text-faint:   #94B0C4;
+  --text-primary: #202A33;
+  --text-body:    #3A4A57;
+  --text-muted:   #5C6E7B;
+  --text-faint:   #93AAB8;
 
-  --shadow-sm: 0 1px 4px rgba(15,42,69,0.06);
-  --shadow-md: 0 4px 20px rgba(15,42,69,0.09);
-  --shadow-lg: 0 12px 48px rgba(15,42,69,0.12);
+  --shadow-sm: 0 1px 4px rgba(32,42,51,0.06);
+  --shadow-md: 0 4px 20px rgba(32,42,51,0.10);
+  --shadow-lg: 0 12px 48px rgba(32,42,51,0.13);
 
   --radius-sm:  8px;
   --radius-md:  14px;
@@ -205,7 +206,7 @@ strong { color: var(--text-primary); }
   display: flex;
   align-items: center;
   gap: 32px;
-  height: 68px;
+  height: 84px;
 }
 
 .nav__logo {
@@ -215,10 +216,9 @@ strong { color: var(--text-primary); }
   text-decoration: none;
 }
 .nav__logo img {
-  height: 48px;
+  height: 64px;
   width: auto;
   display: block;
-  /* The logo has a dark navy wordmark — invert slightly on scrolled white nav */
   transition: opacity 0.2s;
 }
 .nav__logo:hover img { opacity: 0.85; }
@@ -926,8 +926,15 @@ strong { color: var(--text-primary); }
   flex-direction: column;
   gap: 10px;
 }
-.footer__brand .nav__logo-pro { font-size: 1.5rem; }
-.footer__brand .nav__logo-health { font-size: 1.5rem; }
+.footer__logo {
+  display: inline-block;
+  text-decoration: none;
+}
+.footer__logo img {
+  height: 60px;
+  width: auto;
+  display: block;
+}
 .footer__brand p {
   font-size: 0.875rem;
   color: rgba(255,255,255,0.5);
