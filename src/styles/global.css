@@ -210,33 +210,23 @@ strong { color: var(--text-primary); }
 
 .nav__logo {
   display: flex;
-  flex-direction: column;
-  line-height: 1;
+  align-items: center;
   flex-shrink: 0;
+  text-decoration: none;
 }
-.nav__logo-pro {
-  font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  font-size: 1.25rem;
-  color: var(--blue);
-  letter-spacing: -0.02em;
+.nav__logo img {
+  height: 48px;
+  width: auto;
+  display: block;
+  /* The logo has a dark navy wordmark — invert slightly on scrolled white nav */
+  transition: opacity 0.2s;
 }
-.nav__logo-health {
-  font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  font-size: 1.25rem;
-  color: var(--navy);
-  letter-spacing: -0.02em;
-  margin-top: -4px;
-}
-.nav__logo-sub {
-  font-size: 0.6rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  margin-top: 2px;
-}
+.nav__logo:hover img { opacity: 0.85; }
+
+/* keep old span selectors inert (won't render but avoids cascade issues) */
+.nav__logo-pro,
+.nav__logo-health,
+.nav__logo-sub { display: none; }
 
 .nav__links {
   display: flex;
