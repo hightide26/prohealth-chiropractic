@@ -6,30 +6,160 @@ export interface Props {
   primaryHref?: string;
   secondaryLabel?: string;
   secondaryHref?: string;
+  showForm?: boolean;
 }
 const {
   heading = 'Ready to Feel Better?',
-  subtext = 'New patients always get extra time with Dr. Yager. Call us or book online today.',
+  subtext = 'Call us or fill out the form to secure a slot.',
   primaryLabel = 'Book Online',
   primaryHref = 'https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start',
   secondaryLabel = 'Call (620) 271-0243',
   secondaryHref = 'tel:6202710243',
+  showForm = false,
 } = Astro.props;
 ---
 
-<section class="cta-banner">
-  <div class="container cta-banner__inner" data-gsap="fade-up">
-    <div class="cta-banner__content">
-      <h2>{heading}</h2>
-      <p>{subtext}</p>
+{showForm ? (
+  <section class="cta-banner cta-banner--form">
+    <div class="container cta-banner-form__inner" data-gsap="fade-up">
+      <div class="cta-banner-form__left">
+        <h2>{heading}</h2>
+        <p>{subtext}</p>
+        <div class="cta-banner-form__actions">
+          <a href={secondaryHref} class="btn btn--white btn--lg">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.86 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.77 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.84a16 16 0 006.29 6.29l1.2-1.2a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            {secondaryLabel}
+          </a>
+          <span class="cta-banner-form__or">or fill out the form →</span>
+        </div>
+      </div>
+      <div class="cta-banner-form__right">
+        <div class="cta-form-wrap">
+          <script is:inline src="https://www.emailmeform.com/builder/forms/jsform/uK0T543aqf" type="text/javascript"></script>
+        </div>
+      </div>
     </div>
-    <div class="cta-banner__actions">
-      <a href={primaryHref} target={primaryHref.startsWith('http') ? '_blank' : undefined} class="btn btn--white btn--lg">
-        {primaryLabel}
-      </a>
-      <a href={secondaryHref} class="btn btn--outline-white btn--lg">
-        {secondaryLabel}
-      </a>
+  </section>
+) : (
+  <section class="cta-banner">
+    <div class="container cta-banner__inner" data-gsap="fade-up">
+      <div class="cta-banner__content">
+        <h2>{heading}</h2>
+        <p>{subtext}</p>
+      </div>
+      <div class="cta-banner__actions">
+        <a href={primaryHref} target={primaryHref.startsWith('http') ? '_blank' : undefined} class="btn btn--white btn--lg">
+          {primaryLabel}
+        </a>
+        <a href={secondaryHref} class="btn btn--outline-white btn--lg">
+          {secondaryLabel}
+        </a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+)}
+
+<style>
+/* ── Form variant ─────────────────────────────────────────── */
+.cta-banner--form {
+  background: linear-gradient(135deg, var(--navy) 0%, #0f2a55 100%);
+  padding: 72px 0;
+}
+
+.cta-banner-form__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.cta-banner-form__left h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: white;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.cta-banner-form__left p {
+  color: rgba(255,255,255,0.75);
+  font-size: 1rem;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.cta-banner-form__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cta-banner-form__or {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Form container */
+.cta-banner-form__right {
+  background: white;
+  border-radius: 14px;
+  padding: 32px 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+.cta-form-wrap {
+  width: 100%;
+}
+
+/* Override EmailMeForm defaults to fit our container */
+.cta-form-wrap :global(form),
+.cta-form-wrap :global(.emf-form) {
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: var(--font-body) !important;
+}
+
+.cta-form-wrap :global(input),
+.cta-form-wrap :global(textarea),
+.cta-form-wrap :global(select) {
+  width: 100% !important;
+  border: 1px solid #dde3ed !important;
+  border-radius: 8px !important;
+  padding: 10px 14px !important;
+  font-size: 0.9rem !important;
+  font-family: var(--font-body) !important;
+  color: var(--navy) !important;
+  box-sizing: border-box !important;
+}
+
+.cta-form-wrap :global(input[type="submit"]),
+.cta-form-wrap :global(button[type="submit"]) {
+  background: var(--blue) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 12px 24px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  font-size: 0.95rem !important;
+  width: 100% !important;
+}
+
+.cta-form-wrap :global(input[type="submit"]:hover),
+.cta-form-wrap :global(button[type="submit"]:hover) {
+  background: #1a5bbf !important;
+}
+
+@media (max-width: 800px) {
+  .cta-banner-form__inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .cta-banner--form { padding: 52px 0; }
+}
+</style>
