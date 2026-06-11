@@ -29,6 +29,58 @@ const schema = {
   "medicalSpecialty": "Chiropractor"
 };
 
+const services = [
+  {
+    title: 'ProAdjuster',
+    desc: 'Computer-guided spinal assessment and treatment. Detects exactly where you need care and delivers precise, gentle adjustments — no cracking or twisting required.',
+    bullets: ['7th-generation FDA-cleared technology', 'Objective sensor-based diagnosis', 'Safe for infants to seniors'],
+    href: '/services/proadjuster',
+    cta: 'Learn More',
+    featured: true,
+    icon: `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>`,
+  },
+  {
+    title: 'Manual Adjustments',
+    desc: 'Traditional hands-on chiropractic techniques — Diversified, Thompson Drop Table, and more — tailored to patients who prefer or benefit from manual care.',
+    bullets: ['Diversified technique', 'Thompson Drop Table', 'Personalized to your needs'],
+    href: '/services/chiropractic-adjustments',
+    cta: 'Learn More',
+    icon: `<path d="M9 11V5a3 3 0 016 0v6M9 11l-3 3v6h12v-6l-3-3M9 11h6"/>`,
+  },
+  {
+    title: 'Pre-Adjustment Muscle Work',
+    desc: 'Amy preps your soft tissue with targeted muscle work and e-stim before Dr. Yager adjusts — relaxed muscles release faster and hold the correction longer.',
+    bullets: ['Targeted soft-tissue therapy', 'Electrical muscle stimulation', 'Faster, more lasting results'],
+    href: '/services/chiropractic-adjustments',
+    cta: 'Learn More',
+    icon: `<path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>`,
+  },
+  {
+    title: 'Yager Diet & Weight Management',
+    desc: 'Jodi Yager leads our ChiroThin-based program — a supervised, structured 42-day approach with real coaching. Patients have lost 40+ lbs in just 3 months.',
+    bullets: ['42-day structured program', 'Personal coaching with Jodi', 'Real, lasting results'],
+    href: '/contact',
+    cta: 'Learn More',
+    icon: `<path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/>`,
+  },
+  {
+    title: 'Alkaline Water',
+    desc: 'Premium high-pH alkaline water available in-office for our patients — supports hydration, recovery, and overall wellness as part of a healthy lifestyle.',
+    bullets: ['High-pH alkaline water', 'Supports hydration & recovery', 'Available in-office'],
+    href: '/contact',
+    cta: 'Ask About It',
+    icon: `<path d="M12 2.5s-7 8-7 13a7 7 0 0014 0c0-5-7-13-7-13z"/>`,
+  },
+  {
+    title: 'Maintenance & Preventive Care',
+    desc: 'Stay ahead of pain with regular wellness adjustments. Ongoing care keeps your spine moving, your nervous system clear, and your body performing at its best.',
+    bullets: ['Wellness-focused care plans', 'Routine ProAdjuster sessions', 'For the whole family'],
+    href: '/new-patients',
+    cta: 'Plan a Visit',
+    icon: `<path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>`,
+  },
+];
+
 const reviews = [
   { initials: 'JM', name: 'Jennifer McKahan', time: '3 months ago', text: 'For years I struggled with back pain and my arms/hands falling asleep. After <strong>one visit</strong> my arms have not fallen asleep. I\'m sleeping through the night — it feels like a miracle!' },
   { initials: 'DM', name: 'Damon McKahan', time: '2 months ago', text: 'I\'ve never been a fan of the "pop and crack" style. Dr. Yager is amazing and the ProAdjuster treatment is <strong>incredible</strong>! So comfortable and relaxing!' },
@@ -209,44 +261,23 @@ const reviews = [
         <p>Comprehensive chiropractic care for your whole family in Garden City, Kansas — from pain relief to long-term wellness.</p>
       </div>
       <div class="services__grid">
-        <div class="service-card service-card--featured" data-gsap="fade-up" data-delay="0">
-          <div class="service-card__icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        {services.map((s, i) => (
+          <div
+            class={`service-card${s.featured ? ' service-card--featured' : ''}`}
+            data-gsap="fade-up"
+            data-delay={String((i % 3) * 0.1)}
+          >
+            <div class="service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" set:html={s.icon} />
+            </div>
+            <h3>{s.title}</h3>
+            <p>{s.desc}</p>
+            <ul class="service-card__list">
+              {s.bullets.map(b => <li>{b}</li>)}
+            </ul>
+            <a href={s.href} class={`btn ${s.featured ? 'btn--primary' : 'btn--outline'} btn--sm`}>{s.cta}</a>
           </div>
-          <h3>Chiropractic Care</h3>
-          <p>Dr. Yager creates a personalized adjustment plan using the ProAdjuster and manual techniques for your specific needs — neck pain, back pain, headaches, or wellness maintenance.</p>
-          <ul class="service-card__list">
-            <li>ProAdjuster (computer-guided)</li>
-            <li>Manual adjustments</li>
-            <li>E-stim therapy</li>
-            <li>Pre-adjustment muscle work</li>
-            <li>Maintenance &amp; preventive care</li>
-          </ul>
-          <a href="https://squareup.com/appointments/book/ejx1i5qse7fkql/LEEFEEKJTRBZY/start" target="_blank" class="btn btn--primary btn--sm">Book Now</a>
-        </div>
-        <div class="service-card" data-gsap="fade-up" data-delay="0.15">
-          <div class="service-card__icon service-card__icon--teal">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-          </div>
-          <h3>Yager Diet &amp; Weight Management</h3>
-          <p>Jodi Yager leads our ChiroThin-based program — a supervised, structured approach that delivers real results. Patients have lost 40+ lbs in just 3 months.</p>
-          <ul class="service-card__list">
-            <li>42-day structured program</li>
-            <li>Personal coaching with Jodi</li>
-            <li>Video education &amp; in-person meetings</li>
-            <li>Ongoing accountability support</li>
-          </ul>
-          <a href="/contact" class="btn btn--outline btn--sm">Learn More</a>
-        </div>
-        <div class="service-card service-card--coming" data-gsap="fade-up" data-delay="0.3">
-          <div class="service-card__icon service-card__icon--muted">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          </div>
-          <div class="service-card__coming-badge">More Coming Soon</div>
-          <h3>Additional Services</h3>
-          <p>We're expanding. Ask us about everything we offer when you call or visit.</p>
-          <a href="tel:6202710243" class="btn btn--ghost btn--sm">Call to Learn More</a>
-        </div>
+        ))}
       </div>
     </div>
   </section>
