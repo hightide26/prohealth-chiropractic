@@ -1242,6 +1242,97 @@ strong { color: var(--text-primary); }
   text-align: left;
 }
 
+/* ─────────────────────────────────────────────
+   HOMEPAGE TEAM SECTION
+   ───────────────────────────────────────────── */
+.team-section { position: relative; }
+
+.team-photo {
+  position: relative;
+  max-width: 1080px;
+  margin: 48px auto 56px;
+}
+.team-photo__frame {
+  position: relative;
+  z-index: 2;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 8px solid #fff;
+  box-shadow: 0 36px 70px -24px rgba(32,42,51,0.32),
+              0 14px 30px -16px rgba(8,152,216,0.22);
+}
+.team-photo__frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+.team-photo__accent {
+  position: absolute;
+  z-index: 1;
+  right: -22px;
+  bottom: -22px;
+  width: 78%;
+  height: 86%;
+  border-radius: 30px;
+  background: linear-gradient(140deg, var(--blue) 0%, var(--blue-light) 100%);
+  opacity: 0.85;
+}
+
+.team-roster {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.team-roster__item {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.team-roster__item:hover {
+  transform: translateY(-2px);
+  border-color: var(--blue);
+  box-shadow: 0 10px 24px -12px rgba(8,152,216,0.30);
+}
+.team-roster__item strong {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--navy);
+}
+.team-roster__item span {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.team-section__cta {
+  text-align: center;
+  margin-top: 48px;
+}
+.team-section__cta .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+@media (max-width: 900px) {
+  .team-roster { grid-template-columns: repeat(3, 1fr); }
+  .team-photo__accent { right: -14px; bottom: -14px; }
+}
+@media (max-width: 540px) {
+  .team-roster { grid-template-columns: repeat(2, 1fr); }
+  .team-photo { margin: 36px auto 44px; }
+  .team-photo__frame { border-width: 5px; border-radius: 18px; }
+}
+
 /* ============================================================
    WHY GRID
    ============================================================ */
